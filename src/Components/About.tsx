@@ -1,7 +1,8 @@
 const About = () => {
   return (
     <div id="about" className="flex flex-col justify-center items-center ">
-      Kyaa Daalu BC?
+      <h1 className="text-5xl">About Techotsav</h1>
+      <br />
     </div>
   );
 };

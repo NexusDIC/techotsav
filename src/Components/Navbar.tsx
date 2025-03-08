@@ -35,7 +35,7 @@ const Navbar = () => {
   ];
 
   return (
-    <div className="flex justify-around  bg-white/10 backdrop-blur-md  shadow-lg">
+    <div className="sticky top-0 flex justify-around bg-white/10 backdrop-blur-md shadow-lg">
       {/* Glassmorphism effect */}
       <div className="logo p-5">
         <Link href="/">

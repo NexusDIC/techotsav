@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -13,9 +12,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Techotsav 2.0",
+  title: "Hackotsav",
   description:
-    "Techotsav2.0 is an amazing opportunity to explore the constant change in the world of technology, that you don't want to miss. It doesn't matter if you're an experienced programmer, a new enthusiast, or just excited by the endless possibilities of tech, this event is designed especially for you.",
+    "Hackotsav is an online hackathon, an amazing opportunity to compete against some of the best in your field and make a name for your self. Fight against the best and prove your worth.",
 };
 
 export default function RootLayout({

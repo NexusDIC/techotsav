@@ -15,6 +15,9 @@ export default function Speakers() {
     "Your Mom",
     "Your Sister",
     "Your Sister's Bestie",
+    "Your English Madam",
+    "Your Ex",
+    "Your Ex's Bestie",
   ];
 
   return (
@@ -23,7 +26,7 @@ export default function Speakers() {
         className=""
         plugins={[
           Autoplay({
-            delay: 2000,
+            delay: 3000,
           }),
         ]}
       >
@@ -34,7 +37,7 @@ export default function Speakers() {
           {speakers.map((name, index) => (
             <CarouselItem key={index}>
               <div className="p-1">
-                <Card>
+                <Card className="">
                   <CardContent className="flex  items-center justify-center p-6">
                     <span className="text-4xl font-semibold">{name}</span>
                   </CardContent>
@@ -46,6 +49,9 @@ export default function Speakers() {
         <CarouselPrevious />
         <CarouselNext />
       </Carousel>
+      <br />
+      <br />
+      <br />
     </div>
   );
 }

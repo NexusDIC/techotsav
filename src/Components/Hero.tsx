@@ -13,7 +13,7 @@ const monotonFont = localFont({
 const Hero = () => {
   return (
     <div>
-      <div className="h-[83dvh] px-5 flex justify-center items-center">
+      <div className="h-[85dvh] px-5 flex justify-center items-center">
         <div className="main max-w-6xl text-center">
           <h1
             className={`text-9xl ${monotonFont.className} text-green-600 cursor-default select-none`}
