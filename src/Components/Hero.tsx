@@ -1,3 +1,4 @@
+import { FC } from "react";
 import { MarqueeText } from "./Marquee";
 import localFont from "next/font/local";
 import Timer from "./Timer";
@@ -10,7 +11,11 @@ const monotonFont = localFont({
   src: "../fonts/Monoton-Regular.ttf",
 });
 
-const Hero = () => {
+interface HeroProps {
+  child: string;
+} 
+
+const Hero: FC<HeroProps> = ({child}) => {
   return (
     <div>
       <div className="h-[85dvh] px-5 flex justify-center items-center">
@@ -18,7 +23,7 @@ const Hero = () => {
           <h1
             className={`text-9xl ${monotonFont.className} text-green-600 cursor-default select-none`}
           >
-            TECHOTSAV 2.0
+            {child}
           </h1>
           <br />
           <p className={`text-2xl ${hubotFont.className} text-emerald-300`}>
@@ -41,3 +46,5 @@ const Hero = () => {
 };
 
 export default Hero;
+
+

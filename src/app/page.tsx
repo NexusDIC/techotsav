@@ -6,15 +6,35 @@ import Sponsors from "@/Components/Sponsors";
 import ComPats from "@/Components/ComPats";
 import Faq from "@/Components/Faq";
 import Navbar from "../Components/Navbar";
+import Link from "next/link";
+import { SparklesCore } from "@/Components/ui/sparkles";
 
 export default function Home() {
   return (
     <div>
+      <div className="w-full absolute inset-0 h-screen">
+        <SparklesCore
+          id="tsparticlesfullpage"
+          background="transparent"
+          minSize={0.6}
+          maxSize={1.4}
+          particleDensity={100}
+          className="w-full h-full"
+          particleColor="#FFFFFF"
+        />
+      </div>
       <Navbar />
-      <Hero />
+      <Hero child= "TECHOTSAV 2.0"/>
       <div className="px-5">
         <br />
         <About />
+        {/* <div className="text-center my-10">
+        <Link href="/hackathon">
+          <button className="bg-indigo-500 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded">
+            Go to Hackotsav 🚀
+          </button>
+        </Link>
+      </div> */}
         <hr />
         <br />
         <Schedule />
