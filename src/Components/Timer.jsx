@@ -9,7 +9,9 @@ const bungeeOutlineFont = localFont({
 });
 
 export default function Timer() {
-  const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
+  const [timeLeft, setTimeLeft] = useState(0);
+
+  const [isLoaded, setIsLoaded] = useState(false);
 
   function calculateTimeLeft() {
     const targetDate = new Date("March 22, 2025 10:00:00 GMT+0530");
@@ -32,10 +34,11 @@ export default function Timer() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setTimeLeft(calculateTimeLeft());
-    }, 1000);
+    }, 0);
+    setIsLoaded(true);
 
     return () => clearTimeout(timer);
-  });
+  }, [isLoaded]);
 
   const { days, hours, minutes, seconds } = timeLeft;
 
@@ -47,12 +50,20 @@ export default function Timer() {
       <p
         className={`select-none text-6xl font-bold inline-block ${bungeeOutlineFont.className}`}
       >
-        {days !== undefined ? `${days}:` : ""}
-        {hours !== undefined ? `${hours.toString().padStart(2, "0")}:` : "00:"}
-        {minutes !== undefined
-          ? `${minutes.toString().padStart(2, "0")}:`
-          : "00:"}
-        {seconds !== undefined ? seconds.toString().padStart(2, "0") : "00"}
+        {!isLoaded ? (
+          <>Calculating..</>
+        ) : (
+          <>
+            {days !== undefined ? `${days}:` : ""}
+            {hours !== undefined
+              ? `${hours.toString().padStart(2, "0")}:`
+              : "00:"}
+            {minutes !== undefined
+              ? `${minutes.toString().padStart(2, "0")}:`
+              : "00:"}
+            {seconds !== undefined ? seconds.toString().padStart(2, "0") : "00"}
+          </>
+        )}
       </p>
     </div>
   );
