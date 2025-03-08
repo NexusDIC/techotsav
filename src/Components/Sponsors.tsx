@@ -1,11 +1,10 @@
-import React from "react";
 import {
   Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
   CardHeader,
+  CardFooter,
   CardTitle,
+  CardDescription,
+  CardContent,
 } from "./ui/card";
 
 const Sponsors = () => {

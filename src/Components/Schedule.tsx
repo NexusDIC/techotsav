@@ -1,6 +1,7 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
+import { motion, useInView } from "framer-motion";
 
 interface ScheduleItem {
   time: string;
@@ -48,6 +49,34 @@ const colors: string[] = [
   "text-pink-500",
 ];
 
+const ScheduleItemComponent: React.FC<{
+  session: ScheduleItem;
+  index: number;
+}> = ({ session, index }) => {
+  const ref = useRef(null);
+  const isInView = useInView(ref);
+
+  // Ensuring hooks are always called before returning JSX
+  const animationProps = isInView
+    ? { x: 0, opacity: 1, scale: 1 }
+    : { x: -100, opacity: 0, scale: 0.75 };
+
+  return (
+    <motion.div
+      ref={ref}
+      initial={{ x: 100, opacity: 0, scale: 0.75 }}
+      animate={animationProps}
+      transition={{ duration: 0.5, delay: index * 0.1 }}
+      className={`w-fit p-4  flex flex-col items-center border-b-2 ${
+        colors[index % colors.length]
+      }`}
+    >
+      <h2 className="text-3xl font-bold text-center">{session.event}</h2>
+      <p className="text-xl text-center">{session.time}</p>
+    </motion.div>
+  );
+};
+
 const Schedule: React.FC = () => {
   const [selectedDay, setSelectedDay] = useState<keyof ScheduleData>("day1");
 
@@ -76,15 +105,7 @@ const Schedule: React.FC = () => {
       {/* Schedule List */}
       <div className="space-y-6 flex flex-col items-center">
         {schedule[selectedDay].map((session, index) => (
-          <div
-            key={index}
-            className={`w-fit p-4 transform transition-all duration-300 flex flex-col items-center border-b-2 ${
-              colors[index % colors.length]
-            }`}
-          >
-            <h2 className="text-3xl font-bold text-center">{session.event}</h2>
-            <p className="text-xl text-center">{session.time}</p>
-          </div>
+          <ScheduleItemComponent key={index} session={session} index={index} />
         ))}
       </div>
     </div>
