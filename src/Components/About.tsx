@@ -1,21 +1,23 @@
-//import Image from "next/image";
+import Image from "next/image";
 
 const About = () => {
   return (
-    <div id="about" className="flex flex-col justify-center items-center p-6">
+    <div id="about" className="">
       <h1 className="text-5xl text-center text-white mb-6">
         What is TECHOTSAV2.0?
       </h1>
+      <br />
+      <br />
 
-      <div className="relative w-[500px] h-[300px]">
-        {/* <Image
-          src=""
+      <div className="flex gap-16 justify-center items-center p-6">
+        <Image
+          src="/imgs/photo.png"
           alt="Event poster for Techotsav"
-          layout="fill"
-          objectFit="cover"
+          height={800}
+          width={800}
           className="rounded-lg shadow-lg"
-        /> */}
-        <div className="right text-lg text-center text-gray-300 mt-6 max-w-3xl">
+        />
+        <div className="right text-xl text-center text-gray-300 mt-6 max-w-xl leading-10">
           Techotsav is Nagpur&apos;s premier tech fest, bridging the gap between
           students and industry professionals through innovation, learning, and
           collaboration. Attendees dive deep into programming languages, AI,

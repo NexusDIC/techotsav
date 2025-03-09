@@ -29,7 +29,7 @@ export default function Home() {
             minSize={0.6}
             maxSize={1.4}
             particleDensity={100}
-            className="w-full h-full"
+            className="h-auto"
             particleColor="#FFFFFF"
           />
         </div>
