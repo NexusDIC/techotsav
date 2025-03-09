@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { FC } from "react";
 import { MarqueeText } from "./Marquee";
 import localFont from "next/font/local";
 import Timer from "./Timer";
@@ -29,7 +28,7 @@ const Hero: React.FC<HeroProps> = ({ title }) => {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            TECHOTSAV 2.0
+            {title}
           </motion.h1>
           <br />
           <motion.p

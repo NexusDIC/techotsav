@@ -11,7 +11,7 @@ export default function Hackotsav() {
   return (
     <div>
       <Navbar />
-      <Hero child= "HACKOTSAV"/>
+      <Hero title="HACKOTSAV" />
       <div className="px-5">
         <br />
         <About />
