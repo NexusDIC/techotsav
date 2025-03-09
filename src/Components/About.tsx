@@ -2,28 +2,30 @@ import Image from "next/image";
 
 const About = () => {
   return (
-    <div id="about" className="">
-      <h1 className="text-5xl text-center text-white mb-6">
-        What is TECHOTSAV2.0?
+    <div id="about" className="px-6 py-12 flex flex-col items-center">
+      {/* Title */}
+      <h1 className="text-4xl sm:text-5xl text-center text-white font-bold mb-8">
+        What is TECHOTSAV 2.0?
       </h1>
-      <br />
-      <br />
 
-      <div className="flex gap-16 justify-center items-center p-6">
+      {/* Image and Description Section */}
+      <div className="flex flex-col lg:flex-row items-center lg:gap-16 w-full max-w-6xl">
+        {/* Event Image */}
         <Image
           src="/imgs/photo.png"
           alt="Event poster for Techotsav"
           height={800}
           width={800}
-          className="rounded-lg shadow-lg"
+          className="rounded-lg shadow-lg w-full sm:w-[80%] md:w-[60%] lg:w-[50%]"
         />
-        <div className="right text-xl text-center text-gray-300 mt-6 max-w-xl leading-10">
+
+        {/* Description */}
+        <div className="text-gray-300 mt-6 lg:mt-0 text-center sm:text-left max-w-xl leading-8 text-lg sm:text-xl lg:text-2xl">
           Techotsav is Nagpur&apos;s premier tech fest, bridging the gap between
           students and industry professionals through innovation, learning, and
           collaboration. Attendees dive deep into programming languages, AI,
           machine learning, and industry trends, gaining real-world knowledge
-          and practical skills to thrive in the tech ecosystem. Techotsav is a
-          celebration of innovation, technology, and creativity. Join us for an
+          and practical skills to thrive in the tech ecosystem. Join us for an
           unforgettable experience filled with workshops, discussions, and
           hands-on projects.
         </div>
