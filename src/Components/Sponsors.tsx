@@ -1,7 +1,6 @@
 "use client";
 
-import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
+import { motion } from "framer-motion";
 import {
   Card,
   CardHeader,
@@ -22,15 +21,16 @@ const Sponsors = () => {
   ];
 
   return (
-    <div>
-      <h1 className="text-5xl text-center">Sponsors</h1>
+    <div className="px-5 py-10">
+      <h1 className="text-3xl sm:text-4xl md:text-5xl text-center text-white font-bold">
+        Sponsors
+      </h1>
       <br />
-      <div className="flex gap-[2rem] flex-wrap justify-center">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 justify-center">
         {sponsors.map((name, index) => (
           <SponsorCard key={index} name={name} index={index} />
         ))}
       </div>
-      <br />
       <br />
     </div>
   );
@@ -40,31 +40,24 @@ const SponsorCard: React.FC<{ name: string; index: number }> = ({
   name,
   index,
 }) => {
-  const ref = useRef(null);
-  const isInView = useInView(ref);
-
-  const animationProps = isInView
-    ? { y: 0, opacity: 1, scale: 1 }
-    : { y: 50, opacity: 0, scale: 0.8 };
-
   return (
     <motion.div
-      ref={ref}
       initial={{ y: 50, opacity: 0, scale: 0.8 }}
-      animate={animationProps}
+      whileInView={{ y: 0, opacity: 1, scale: 1 }}
+      viewport={{ once: true }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
-      className="w-1/4 hover:transition-transform hover:duration-400 hover:ease-in-out hover:scale-115"
+      className="hover:scale-105  ease-in-out"
     >
-      <Card>
+      <Card className=" text-white shadow-lg p-4">
         <CardHeader>
           <CardTitle>{name}</CardTitle>
-          <CardDescription>Card Description</CardDescription>
+          <CardDescription>Special Thanks</CardDescription>
         </CardHeader>
         <CardContent>
-          <p>Card Content</p>
+          <p>Thank you for your support!</p>
         </CardContent>
         <CardFooter>
-          <p>Card Footer</p>
+          <p>More info soon...</p>
         </CardFooter>
       </Card>
     </motion.div>
