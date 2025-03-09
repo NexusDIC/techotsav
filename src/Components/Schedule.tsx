@@ -67,6 +67,7 @@ const ScheduleItemComponent: React.FC<{
       initial={{ x: 100, opacity: 0, scale: 0.75 }}
       animate={animationProps}
       transition={{ duration: 0.5, delay: index * 0.1 }}
+      id="schedule"
       className={`w-fit p-4  flex flex-col items-center border-b-2 ${
         colors[index % colors.length]
       }`}

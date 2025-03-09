@@ -21,7 +21,10 @@ export default function Speakers() {
   ];
 
   return (
-    <div className="flex flex-col items-center justify-center gap-y-8 w-full">
+    <div
+      className="flex flex-col items-center justify-center gap-y-8 w-full"
+      id="speakers"
+    >
       <h1 className="text-4xl md:text-5xl font-bold text-center">Speakers</h1>
 
       <Carousel
