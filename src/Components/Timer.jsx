@@ -11,8 +11,6 @@ const bungeeOutlineFont = localFont({
 export default function Timer() {
   const [timeLeft, setTimeLeft] = useState(0);
 
-  const [isLoaded, setIsLoaded] = useState(false);
-
   function calculateTimeLeft() {
     const targetDate = new Date("March 22, 2025 10:00:00 GMT+0530");
     const now = new Date();
@@ -34,11 +32,10 @@ export default function Timer() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setTimeLeft(calculateTimeLeft());
-    }, 0);
-    setIsLoaded(true);
+    }, 1000);
 
     return () => clearTimeout(timer);
-  }, [isLoaded]);
+  });
 
   const { days, hours, minutes, seconds } = timeLeft;
 
@@ -50,20 +47,12 @@ export default function Timer() {
       <p
         className={`select-none text-6xl font-bold inline-block ${bungeeOutlineFont.className}`}
       >
-        {!isLoaded ? (
-          <>Calculating..</>
-        ) : (
-          <>
-            {days !== undefined ? `${days}:` : ""}
-            {hours !== undefined
-              ? `${hours.toString().padStart(2, "0")}:`
-              : "00:"}
-            {minutes !== undefined
-              ? `${minutes.toString().padStart(2, "0")}:`
-              : "00:"}
-            {seconds !== undefined ? seconds.toString().padStart(2, "0") : "00"}
-          </>
-        )}
+        {days !== undefined ? `${days}:` : ""}
+        {hours !== undefined ? `${hours.toString().padStart(2, "0")}:` : "00:"}
+        {minutes !== undefined
+          ? `${minutes.toString().padStart(2, "0")}:`
+          : "00:"}
+        {seconds !== undefined ? seconds.toString().padStart(2, "0") : "00"}
       </p>
     </div>
   );

@@ -13,7 +13,11 @@ const monotonFont = localFont({
   src: "../fonts/Monoton-Regular.ttf",
 });
 
-const Hero = () => {
+interface HeroProps {
+  title: string;
+}
+
+const Hero: React.FC<HeroProps> = ({ title }) => {
   return (
     <div>
       <div className="h-[85dvh] px-5 flex justify-center items-center">
@@ -24,7 +28,7 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            TECHOTSAV 2.0
+            {title}
           </motion.h1>
           <br />
           <motion.p
@@ -33,10 +37,10 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
           >
-            Techotsav is back with it&apos;s second rendition. Get ready to
-            experience the technology never before. Multiple Workshops, Panel
-            Discussions and also a hackathon to satisfy your technical needs, we
-            got everything to quench your brainly thirst
+            Techotsav is back with its second rendition. Get ready to experience
+            technology like never before. Multiple workshops, panel discussions,
+            and a hackathon to satisfy your technical needs—we’ve got everything
+            to quench your brainly thirst.
           </motion.p>
           <br />
           <motion.div

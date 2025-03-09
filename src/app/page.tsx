@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <div>
       <Navbar />
-      <Hero />
+      <Hero title="TECHOTSAV2.0" />
       <div className="px-5">
         <br />
         <About />
