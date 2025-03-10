@@ -14,15 +14,17 @@ import Button from "@/Components/ui/gotoBtn";
 
 export default function Home() {
   const [showParticles, setShowParticles] = useState(false);
+  const sub = `Techotsav is back with its second rendition. Get ready to experience
+            technology like never before. Multiple workshops, panel discussions,
+            and a hackathon to satisfy your technical needs—we've got
+            everything to quench your brainly thirst.`;
 
   useEffect(() => {
     setShowParticles(true);
   }, []);
 
   return (
-
     <div className="">
-
       {showParticles && (
         <div className="w-full absolute inset-0 h-full">
           <SparklesCore
@@ -38,7 +40,13 @@ export default function Home() {
       )}
       <div className="relative z-10">
         <Navbar />
-        <Hero title="TECHOTSAV2.0" />
+        <Hero
+          title="TECHOTSAV2.0"
+          sub={sub}
+          date="21-22"
+          timer={true}
+          text="Techotsav 2.0"
+        />
         <div className="px-5">
           <br />
           <About />

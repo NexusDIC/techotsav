@@ -15,9 +15,13 @@ const monotonFont = localFont({
 
 interface HeroProps {
   title: string;
+  sub: string;
+  date: string;
+  timer: boolean;
+  text: string;
 }
 
-const Hero: React.FC<HeroProps> = ({ title }) => {
+const Hero: React.FC<HeroProps> = ({ title, sub, date, timer, text }) => {
   return (
     <div>
       <div className="h-[85dvh] px-5 flex flex-col justify-center items-center text-center">
@@ -37,10 +41,7 @@ const Hero: React.FC<HeroProps> = ({ title }) => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
           >
-            Techotsav is back with its second rendition. Get ready to experience
-            technology like never before. Multiple workshops, panel discussions,
-            and a hackathon to satisfy your technical needs—we&apos;ve got
-            everything to quench your brainly thirst.
+            {sub}
           </motion.p>
           <br />
           <motion.div
@@ -49,7 +50,7 @@ const Hero: React.FC<HeroProps> = ({ title }) => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
           >
-            21-22 March 2025
+            {date} March 2025
           </motion.div>
           <br />
           <motion.div
@@ -57,7 +58,7 @@ const Hero: React.FC<HeroProps> = ({ title }) => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.9, ease: "easeOut" }}
           >
-            <Timer />
+            {timer && <Timer />}
           </motion.div>
         </div>
       </div>
@@ -67,7 +68,7 @@ const Hero: React.FC<HeroProps> = ({ title }) => {
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8, delay: 1.2, ease: "easeOut" }}
       >
-        <MarqueeText />
+        <MarqueeText text={text} />
       </motion.div>
     </div>
   );

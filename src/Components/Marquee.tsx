@@ -2,7 +2,10 @@
 
 import { useEffect, useRef } from "react";
 
-export function MarqueeText() {
+interface MarqueeProps {
+  text: string;
+}
+export const MarqueeText: React.FC<MarqueeProps> = ({ text }) => {
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -50,11 +53,11 @@ export function MarqueeText() {
       <div ref={containerRef} className="flex whitespace-nowrap">
         {[...Array(10)].map((_, index) => (
           <div key={index} className="flex items-center mx-4">
-            <span className="text-white font-bold">Techotsav 2.0</span>
+            <span className="text-white font-bold">{text}</span>
             <span className="mx-2 text-gray-500">&lt;/&gt;</span>
           </div>
         ))}
       </div>
     </div>
   );
-}
+};

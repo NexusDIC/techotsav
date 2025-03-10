@@ -2,23 +2,23 @@
 
 import Hero from "@/Components/Hero";
 import About from "@/Components/About";
-import Schedule from "@/Components/Schedule";
-import Speakers from "@/Components/Speaker";
+import Dates from "./Dates";
 import Sponsors from "@/Components/Sponsors";
 import ComPats from "@/Components/ComPats";
 import Faq from "@/Components/Faq";
 import Navbar from "@/Components/Navbar";
 import ThreeDCard from "@/Components/ThreeDCard";
-import Modal from "@/Components/Modal"; // Corrected import path
+import Modal from "@/Components/Modal";
 import { SparklesCore } from "@/Components/ui/sparkles";
 import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from 'framer-motion';
+import { AnimatePresence } from "framer-motion";
 
 export default function Hackotsav() {
   const [showParticles, setShowParticles] = useState(false);
   const [showModal, setShowModal] = useState(false);
   const [modalData, setModalData] = useState<CardData>({} as CardData);
   const [keyData, setKeyData] = useState(0);
+  const sub = "The Ultimate Tech Fest";
 
   interface CardData {
     title: string;
@@ -29,11 +29,41 @@ export default function Hackotsav() {
   }
 
   const cardData: CardData[] = [
-    { title: "WebDev Mastery", description: "Innovate and explore the mysteries of development.", image: "/imgs/logo.png", linkText: "Start Now →", linkUrl: "https://hackmaster.com" },
-    { title: "Innovate with AI", description: "Explore the latest advancements in AI.", image: "/imgs/logo.png", linkText: "Learn More →", linkUrl: "https://ai-innovations.com" },
-    { title: "Web3 Revolution", description: "Unlock the potential of decentralized tech.", image: "/imgs/logo.png", linkText: "Discover →", linkUrl: "https://web3future.com" },
-    { title: "Cybersecurity Insights", description: "Master the art of digital protection.", image: "/imgs/logo.png", linkText: "Read More →", linkUrl: "https://cybersecuritytoday.com" },
-    { title: "Open Innovations", description: "Bring your very own innovations onto the plate.", image: "/imgs/logo.png", linkText: "Explore →", linkUrl: "https://cloudtech.com" },
+    {
+      title: "WebDev Mastery",
+      description: "Innovate and explore the mysteries of development.",
+      image: "/imgs/logo.png",
+      linkText: "Start Now →",
+      linkUrl: "https://hackmaster.com",
+    },
+    {
+      title: "Innovate with AI",
+      description: "Explore the latest advancements in AI.",
+      image: "/imgs/logo.png",
+      linkText: "Learn More →",
+      linkUrl: "https://ai-innovations.com",
+    },
+    {
+      title: "Web3 Revolution",
+      description: "Unlock the potential of decentralized tech.",
+      image: "/imgs/logo.png",
+      linkText: "Discover →",
+      linkUrl: "https://web3future.com",
+    },
+    {
+      title: "Cybersecurity Insights",
+      description: "Master the art of digital protection.",
+      image: "/imgs/logo.png",
+      linkText: "Read More →",
+      linkUrl: "https://cybersecuritytoday.com",
+    },
+    {
+      title: "Open Innovations",
+      description: "Bring your very own innovations onto the plate.",
+      image: "/imgs/logo.png",
+      linkText: "Explore →",
+      linkUrl: "https://cloudtech.com",
+    },
   ];
 
   useEffect(() => setShowParticles(true), []);
@@ -69,23 +99,26 @@ export default function Hackotsav() {
       </div>
 
       <div className="relative z-10 pt-20">
-        <Hero title="HACKOTSAV" />
+        <Hero
+          title="HACKOTSAV"
+          sub={sub}
+          date="11-22"
+          timer={false}
+          text="Hackotsav"
+        />
         <div className="px-5">
           <About />
-          <Schedule />
-          <Speakers />
-          <div className="relative z-10 flex justify-center items-center w-full">
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-5 max-w-7xl w-full">
-              {cardData.map((card, index) => (
-                <ThreeDCard
-                  key={index}
-                  {...card}
-                  cardKey={index}
-                  buttonText="View"
-                  onClick={() => handleModalOpen(card, index)}
-                />
-              ))}
-            </div>
+          <Dates />
+          <div className="flex flex-wrap gap-6 p-5 justify-center align-center">
+            {cardData.map((card, index) => (
+              <ThreeDCard
+                key={index}
+                {...card}
+                cardKey={index}
+                buttonText="View"
+                onClick={() => handleModalOpen(card, index)}
+              />
+            ))}
           </div>
 
           <Sponsors />
@@ -96,7 +129,14 @@ export default function Hackotsav() {
 
       {/* Modal Component */}
       <AnimatePresence>
-        {showModal && <Modal isOpen={showModal} onClose={handleModalClose} data={modalData} cardKey={keyData} />}
+        {showModal && (
+          <Modal
+            isOpen={showModal}
+            onClose={handleModalClose}
+            data={modalData}
+            cardKey={keyData}
+          />
+        )}
       </AnimatePresence>
     </div>
   );

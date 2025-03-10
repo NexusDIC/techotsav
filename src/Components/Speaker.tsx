@@ -14,7 +14,7 @@ export default function Speakers() {
   const speakers: string[] = [
     "Mr. Archit Chandak",
     "Mr. Nitin Sachdeva",
-    "YMr. Varun Gandhi",
+    "Mr. Varun Gandhi",
     "Mr. Shivam Joshi",
     "Mr. Anmol Ranjari",
     "Mr. Aakash Singh",
