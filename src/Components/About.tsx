@@ -1,11 +1,15 @@
 import Image from "next/image";
+import { FC } from "react";
 
-const About = () => {
+interface AboutProps {
+  event: string;
+}
+const About: FC<AboutProps> = ({ event }) => {
   return (
     <div id="about" className="px-6 py-12 flex flex-col items-center">
       {/* Title */}
       <h1 className="text-4xl sm:text-5xl text-center text-white font-bold mb-8">
-        What is TECHOTSAV 2.0?
+        What is {event}?
       </h1>
 
       {/* Image and Description Section */}

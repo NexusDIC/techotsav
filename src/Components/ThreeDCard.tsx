@@ -22,7 +22,6 @@ const ThreeDCard: React.FC<CardProps> = ({
   linkText,
   linkUrl,
   buttonText,
-  cardKey,
   onClick, // Added onClick prop
 }) => {
   return (

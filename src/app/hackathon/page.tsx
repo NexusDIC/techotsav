@@ -4,7 +4,6 @@ import Hero from "@/Components/Hero";
 import About from "@/Components/About";
 import Dates from "./Dates";
 import Sponsors from "@/Components/Sponsors";
-import ComPats from "@/Components/ComPats";
 import Faq from "@/Components/Faq";
 import Navbar from "@/Components/Navbar";
 import ThreeDCard from "@/Components/ThreeDCard";
@@ -107,9 +106,9 @@ export default function Hackotsav() {
           text="Hackotsav"
         />
         <div className="px-5">
-          <About />
+          <About event="HACKOTSAV" />
           <Dates />
-          <div className="flex flex-wrap gap-6 p-5 justify-center align-center">
+          <div className="flex flex-wrap lg:gap-6 p-5 justify-center align-center">
             {cardData.map((card, index) => (
               <ThreeDCard
                 key={index}
@@ -122,7 +121,6 @@ export default function Hackotsav() {
           </div>
 
           <Sponsors />
-          <ComPats />
           <Faq />
         </div>
       </div>

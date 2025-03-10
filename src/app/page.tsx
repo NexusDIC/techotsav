@@ -49,7 +49,7 @@ export default function Home() {
         />
         <div className="px-5">
           <br />
-          <About />
+          <About event="TECHOTSAV 2.0" />
           <hr />
           <br />
           <div className="flex justify-center pb-7">
