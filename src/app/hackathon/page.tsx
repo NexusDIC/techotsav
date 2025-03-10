@@ -17,7 +17,7 @@ export default function Hackotsav() {
   const [showModal, setShowModal] = useState(false);
   const [modalData, setModalData] = useState<CardData>({} as CardData);
   const [keyData, setKeyData] = useState(0);
-  const sub = "The Ultimate Tech Fest";
+  const sub = "Innovate, code, compete, and solve real-world challenges in Techotsav’s dynamic hackathon.";
 
   interface CardData {
     title: string;
@@ -137,7 +137,7 @@ export default function Hackotsav() {
           text="Hackotsav"
         />
         <div className="px-5">
-          <About event="HACKOTSAV" />
+          <About event="HACKOTSAV" descripation="Techotsav 2025 presents an adrenaline-fueled hackathon where creativity meets problem-solving. Over two days, participants will tackle real-world challenges in domains like AI, Cybersecurity, IoT, and Cloud Computing. Guided by expert mentors, teams will brainstorm, develop, and present groundbreaking solutions, competing for exciting prizes and recognition. Whether you're a seasoned coder or a tech enthusiast, this hackathon is your stage to build, innovate, and disrupt." />
           <Dates />
           <div className="flex flex-wrap lg:gap-6 p-5 justify-center align-center">
             {cardData.map((card, index) => (

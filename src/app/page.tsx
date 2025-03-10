@@ -78,7 +78,13 @@ export default function Home() {
         />
         <div className="px-5">
           <br />
-          <About event="TECHOTSAV 2.0" />
+          <About event="TECHOTSAV 2.0" descripation=" Techotsav is Nagpur&apos;s premier tech fest, bridging the gap between
+          students and industry professionals through innovation, learning, and
+          collaboration. Attendees dive deep into programming languages, AI,
+          machine learning, and industry trends, gaining real-world knowledge
+          and practical skills to thrive in the tech ecosystem. Join us for an
+          unforgettable experience filled with workshops, discussions, and
+          hands-on projects." />
           <hr />
           <br />
           <div className="flex justify-center pb-7">
