@@ -11,6 +11,7 @@ import Modal from "@/Components/Modal";
 import { SparklesCore } from "@/Components/ui/sparkles";
 import { useState, useEffect } from "react";
 import { AnimatePresence } from "framer-motion";
+import Footer from "@/Components/Footer";
 
 export default function Hackotsav() {
   const [showParticles, setShowParticles] = useState(false);
@@ -167,6 +168,13 @@ export default function Hackotsav() {
           />
         )}
       </AnimatePresence>
+      <br />
+      <hr />
+      <br />
+      <Footer/>
+      <br />
+      <hr />
+      <br />
     </div>
   );
 }
