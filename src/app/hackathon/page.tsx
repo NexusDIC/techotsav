@@ -33,35 +33,35 @@ export default function Hackotsav() {
       title: "WebDev Mastery",
       description: "Innovate and explore the mysteries of development.",
       image: "/imgs/logo.png",
-      linkText: "Start Now →",
+      linkText: " ",
       linkUrl: "https://hackmaster.com",
     },
     {
       title: "Innovate with AI",
       description: "Explore the latest advancements in AI.",
       image: "/imgs/logo.png",
-      linkText: "Learn More →",
+      linkText: " ",
       linkUrl: "https://ai-innovations.com",
     },
     {
       title: "Web3 Revolution",
       description: "Unlock the potential of decentralized tech.",
       image: "/imgs/logo.png",
-      linkText: "Discover →",
+      linkText: " ",
       linkUrl: "https://web3future.com",
     },
     {
       title: "Cybersecurity Insights",
       description: "Master the art of digital protection.",
       image: "/imgs/logo.png",
-      linkText: "Read More →",
+      linkText: " ",
       linkUrl: "https://cybersecuritytoday.com",
     },
     {
       title: "Open Innovations",
       description: "Bring your very own innovations onto the plate.",
       image: "/imgs/logo.png",
-      linkText: "Explore →",
+      linkText: " ",
       linkUrl: "https://cloudtech.com",
     },
   ];
@@ -138,9 +138,12 @@ export default function Hackotsav() {
           text="Hackotsav"
         />
         <div className="px-5">
-          <About event="HACKOTSAV" descripation="Techotsav 2025 presents an adrenaline-fueled hackathon where creativity meets problem-solving. Over two days, participants will tackle real-world challenges in domains like AI, Cybersecurity, IoT, and Cloud Computing. Guided by expert mentors, teams will brainstorm, develop, and present groundbreaking solutions, competing for exciting prizes and recognition. Whether you're a seasoned coder or a tech enthusiast, this hackathon is your stage to build, innovate, and disrupt." />
+          <About event="HACKOTSAV" descripation="Techotsav 2025 presents an adrenaline-fueled hackathon where creativity meets problem-solving. Over two days, participants will tackle real-world challenges in domains like AI, Cybersecurity, IoT, and Cloud Computing. Guided by expert mentors, teams will brainstorm, develop, and present groundbreaking solutions, competing for exciting prizes and recognition. Whether you're a seasoned coder or a tech enthusiast, this hackathon is your stage to build, innovate, and disrupt." imgURL="/imgs/hackathon-poster.png" />
           <Dates />
-          <div className="flex flex-wrap lg:gap-6 p-5 justify-center align-center">
+          <hr />
+          <h1 className="text-5xl text-center lg:pt-9">Problem Statements</h1>
+          <div className="flex flex-wrap lg:gap-6 px-2 py-5 justify-center align-center">
+            
             {cardData.map((card, index) => (
               <ThreeDCard
                 key={index}

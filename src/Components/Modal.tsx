@@ -23,13 +23,13 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, data, cardKey }) => {
   return (
     <AnimatePresence>
       {isOpen && (
-        <div className="fixed inset-0 flex justify-center items-center z-50 backdrop-blur-md bg-black/30">
+        <div className="fixed inset-0 flex justify-center items-center z-50 backdrop-blur-md bg-black/30 ">
             <motion.div
             initial={{ opacity: 0, scale: 0.7 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.7 }}
             transition={{ duration: 0.3, ease: 'easeOut' }}
-            className="bg-black p-6 rounded-2xl shadow-xl max-w-md w-full border- border-gray-300"
+            className="bg-black p-6 rounded-2xl shadow-xl lg:max-w-2xl w-full border- border-gray-300"
             >
             <h2 className="text-2xl font-bold mb-3">{data.title}</h2>
             <p className="text-gray-600 mb-4">{data.description}</p>
