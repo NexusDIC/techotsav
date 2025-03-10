@@ -64,6 +64,37 @@ export default function Hackotsav() {
       linkUrl: "https://cloudtech.com",
     },
   ];
+  const hackthonData = [
+    {
+      "question": "How many participants are allowed in a hackathon team?",
+      "answer": "Each team can have a minimum of 2 and a maximum of 4 participants."
+    },
+    {
+      "question": "What type of hackathon is this?",
+      "answer": "Techotsav's hackathon is an industry-level challenge where participants develop innovative solutions to real-world problems."
+    },
+    {
+      "question": "Do I need specific skills to participate in the hackathon?",
+      "answer": "No specific skills are required. However, knowledge of coding, problem-solving, and teamwork is beneficial."
+    },
+    {
+      "question": "What are the themes for the hackathon problem statements?",
+      "answer": "The hackathon will include challenges based on AI, cybersecurity, IoT, cloud computing, and more."
+    },
+    {
+      "question": "Can participants directly connect with speakers?",
+      "answer": "Yes, there will be networking sessions and opportunities to interact with speakers."
+    },
+    {
+      "question": "Is there a minimum female participation requirement in teams?",
+      "answer": "No, there is no mandatory female participation requirement, but diverse teams are encouraged."
+    },
+    {
+      "question": "Will on-the-spot registration be available?",
+      "answer": "No, all participants must register in advance to secure their spot."
+    },
+
+  ];
 
   useEffect(() => setShowParticles(true), []);
 
@@ -121,7 +152,7 @@ export default function Hackotsav() {
           </div>
 
           <Sponsors />
-          <Faq />
+          <Faq qna={hackthonData}  />
         </div>
       </div>
 

@@ -12,6 +12,36 @@ import { SparklesCore } from "@/Components/ui/sparkles";
 import Button from "@/Components/ui/gotoBtn";
 
 export default function Home() {
+
+  const tech_data = [
+    {
+      question: "Who can attend Techotsav?",
+      answer: "Techotsav is open to students, faculty, industry professionals, and tech enthusiasts from various colleges and companies."
+    },
+    {
+      question: "Will I receive a certificate for participation?",
+      answer: "Yes, all registered participants will receive a certificate of participation."
+    },
+    {
+      question: "Will on-the-spot registration be available?",
+      answer: "No, all participants must register in advance to secure their spot."
+    },
+    {
+      question: "What are the perks of attending Techotsav?",
+      answer: "Perks include networking opportunities, mentorship from industry leaders, exciting competitions, prizes, swags, and learning sessions."
+    },
+    {
+      question: "What should I bring to the event?",
+      answer: "Bring your college ID, registration confirmation, a notepad/laptop for workshops, and lots of enthusiasm!"
+    },
+    {
+      question: "Can I participate in multiple competitions?",
+      answer: "Yes! You can register for multiple competitions, provided there are no scheduling conflicts."
+    }
+  ];
+
+  
+
   const [showParticles, setShowParticles] = useState(false);
   const sub = `Techotsav is back with its second rendition. Get ready to experience
             technology like never before. Multiple workshops, panel discussions,
@@ -69,7 +99,7 @@ export default function Home() {
           <br />
           <hr />
           <br />
-          <Faq />
+          <Faq qna={tech_data}/>
           <br />
           <hr />
           <br />
