@@ -1,10 +1,12 @@
+import { desc } from "framer-motion/client";
 import Image from "next/image";
 import { FC } from "react";
 
 interface AboutProps {
   event: string;
+  descripation: string;
 }
-const About: FC<AboutProps> = ({ event }) => {
+const About: FC<AboutProps> = ({ event,descripation }) => {
   return (
     <div id="about" className="px-6 py-12 flex flex-col items-center">
       {/* Title */}
@@ -25,13 +27,7 @@ const About: FC<AboutProps> = ({ event }) => {
 
         {/* Description */}
         <div className="text-gray-300 mt-6 lg:mt-0 text-center sm:text-left max-w-xl leading-8 text-lg sm:text-xl lg:text-2xl">
-          Techotsav is Nagpur&apos;s premier tech fest, bridging the gap between
-          students and industry professionals through innovation, learning, and
-          collaboration. Attendees dive deep into programming languages, AI,
-          machine learning, and industry trends, gaining real-world knowledge
-          and practical skills to thrive in the tech ecosystem. Join us for an
-          unforgettable experience filled with workshops, discussions, and
-          hands-on projects.
+         {descripation}
         </div>
       </div>
     </div>
