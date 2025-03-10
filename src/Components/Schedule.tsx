@@ -250,7 +250,7 @@ const ScheduleItemComponent: React.FC<{
       <h2 className="text-3xl font-bold text-center">{session.event}</h2>
       <p className="text-xl text-center">{session.time}</p>
       <div className="flex">
-        {session.speakers.map((speaker, speakerIndex) => (
+        {/* {session.speakers.map((speaker, speakerIndex) => (
           <div key={speakerIndex} className="flex items-center space-x-2">
             <Image
               width={50}
@@ -265,7 +265,7 @@ const ScheduleItemComponent: React.FC<{
               {speaker.name}
             </p>
           </div>
-        ))}
+        ))} */}
       </div>
     </motion.div>
   );
