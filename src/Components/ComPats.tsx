@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import {
   Card,
   CardHeader,
@@ -11,13 +12,26 @@ import {
 } from "./ui/card";
 
 const ComPats = () => {
-  const compats: string[] = [
-    "Your Mom",
-    "Your Sister",
-    "Your Sister's Bestie",
-    "Your English Madam",
-    "Your Ex",
-    "Your Ex's Bestie",
+
+  interface Partener {
+    name:string;
+    image:string
+  }
+
+  const compats: Partener[] = [
+    {
+      name:"Event Buzz",
+      image:"/imgs/event-buzz.jpg"
+    }, {
+      name:"IEEE Cummins",
+      image:"/imgs/ieee-cummins.jpg"
+    }, {
+      name:"Nexmeet",
+      image:"/imgs/nexmeet-transparent.png"
+    }, {
+      name:"THM",
+      image:"/imgs/THM.png"
+    }
   ];
 
   return (
@@ -27,8 +41,8 @@ const ComPats = () => {
       </h1>
       <br />
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 justify-center">
-        {compats.map((name, index) => (
-          <SponsorCard key={index} name={name} index={index} />
+        {compats.map((partener, index) => (
+          <SponsorCard key={index} name={partener.name} img={partener.image} index={index} />
         ))}
       </div>
       <br />
@@ -36,9 +50,10 @@ const ComPats = () => {
   );
 };
 
-const SponsorCard: React.FC<{ name: string; index: number }> = ({
+const SponsorCard: React.FC<{ name: string; index: number, img:string }> = ({
   name,
   index,
+  img
 }) => {
   return (
     <motion.div
@@ -51,11 +66,11 @@ const SponsorCard: React.FC<{ name: string; index: number }> = ({
     >
       <Card className=" text-white shadow-lg p-4">
         <CardHeader>
-          <CardTitle>{name}</CardTitle>
-          <CardDescription>Valued Supporter</CardDescription>
+          
+          <CardDescription><Image src={img} alt="something..." height={50} width={50}/></CardDescription>
         </CardHeader>
         <CardContent>
-          <p>Thank you for supporting our community!</p>
+          <p>{name}</p>
         </CardContent>
         <CardFooter>
           <p>More info coming soon...</p>
