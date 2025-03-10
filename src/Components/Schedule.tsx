@@ -2,7 +2,6 @@
 
 import React, { useState, useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import Image from "next/image";
 
 interface ScheduleItem {
   time: string;
@@ -215,14 +214,7 @@ const colors: string[] = [
   "text-pink-500",
 ];
 
-const bgColors = [
-  "#3b82f6", // Blue-500
-  "#10b981", // Green-500
-  "#8b5cf6", // Purple-500
-  "#ef4444", // Red-500
-  "#eab308", // Yellow-500
-  "#ec4899", // Pink-500
-];
+
 
 const ScheduleItemComponent: React.FC<{
   session: ScheduleItem;
