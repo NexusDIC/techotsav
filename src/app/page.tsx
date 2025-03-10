@@ -20,7 +20,9 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="relative min-h-screen">
+
+    <div className="">
+
       {showParticles && (
         <div className="w-full absolute inset-0 h-full">
           <SparklesCore
@@ -29,7 +31,7 @@ export default function Home() {
             minSize={0.6}
             maxSize={1.4}
             particleDensity={100}
-            className="w-full h-full"
+            className="h-dvh"
             particleColor="#FFFFFF"
           />
         </div>
