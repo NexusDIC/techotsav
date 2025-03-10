@@ -5,8 +5,9 @@ import { FC } from "react";
 interface AboutProps {
   event: string;
   descripation: string;
+  imgURL:string;
 }
-const About: FC<AboutProps> = ({ event,descripation }) => {
+const About: FC<AboutProps> = ({ event,descripation, imgURL }) => {
   return (
     <div id="about" className="px-6 py-12 flex flex-col items-center">
       {/* Title */}
@@ -18,8 +19,8 @@ const About: FC<AboutProps> = ({ event,descripation }) => {
       <div className="flex flex-col lg:flex-row items-center lg:gap-16 w-full max-w-6xl">
         {/* Event Image */}
         <Image
-          src="/imgs/photo.png"
-          alt="Event poster for Techotsav"
+          src={imgURL}
+          alt="Event Image"
           height={800}
           width={800}
           className="rounded-lg shadow-lg w-full sm:w-[80%] md:w-[60%] lg:w-[50%]"

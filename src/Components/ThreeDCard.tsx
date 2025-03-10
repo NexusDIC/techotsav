@@ -22,7 +22,7 @@ const ThreeDCard: React.FC<CardProps> = ({
   linkText,
   linkUrl,
   buttonText,
-  onClick, // Added onClick prop
+  onClick,
 }) => {
   return (
     <CardContainer className="inter-var w-auto">
@@ -64,7 +64,7 @@ const ThreeDCard: React.FC<CardProps> = ({
             translateZ={20}
             as="button"
             onClick={onClick}
-            className="px-4 py-2 rounded-xl bg-black dark:bg-white dark:text-black text-white text-xs font-bold"
+            className="px-4 py-2 rounded-xl bg-black dark:bg-white dark:text-black text-white text-xs font-bold cursor-pointer  hover:text-[1rem]  "
           >
             {buttonText}
           </CardItem>

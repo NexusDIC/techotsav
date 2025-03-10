@@ -85,7 +85,7 @@ export default function Home() {
           machine learning, and industry trends, gaining real-world knowledge
           and practical skills to thrive in the tech ecosystem. Join us for an
           unforgettable experience filled with workshops, discussions, and
-          hands-on projects." />
+          hands-on projects." imgURL="/imgs/photo.png"/>
           <hr />
           <br />
           <div className="flex justify-center pb-5">
