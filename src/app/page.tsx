@@ -13,7 +13,7 @@ import Button from "@/Components/ui/gotoBtn";
 
 export default function Home() {
 
-  const tech_data = [
+  const techData = [
     {
       question: "Who can attend Techotsav?",
       answer: "Techotsav is open to students, faculty, industry professionals, and tech enthusiasts from various colleges and companies."
@@ -99,7 +99,7 @@ export default function Home() {
           <br />
           <hr />
           <br />
-          <Faq qna={tech_data}/>
+          <Faq qna={techData}/>
           <br />
           <hr />
           <br />
