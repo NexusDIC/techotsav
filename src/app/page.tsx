@@ -10,6 +10,7 @@ import ComPats from "@/Components/ComPats";
 import Faq from "@/Components/Faq";
 import Navbar from "../Components/Navbar";
 import { SparklesCore } from "@/Components/ui/sparkles";
+import Button from "@/Components/ui/gotoBtn";
 
 export default function Home() {
   const [showParticles, setShowParticles] = useState(false);
@@ -39,6 +40,11 @@ export default function Home() {
         <div className="px-5">
           <br />
           <About />
+          <hr />
+          <br />
+          <div className="flex justify-center pb-7">
+            <Button title="Hackotsav" href="/hackathon" />
+          </div>
           <hr />
           <br />
           <Schedule />

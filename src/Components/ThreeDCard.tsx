@@ -11,6 +11,7 @@ interface CardProps {
   linkText: string;
   linkUrl: string;
   buttonText: string;
+  cardKey: number;
   onClick?: () => void;
 }
 
@@ -21,6 +22,7 @@ const ThreeDCard: React.FC<CardProps> = ({
   linkText,
   linkUrl,
   buttonText,
+  cardKey,
   onClick, // Added onClick prop
 }) => {
   return (
@@ -30,7 +32,7 @@ const ThreeDCard: React.FC<CardProps> = ({
           translateZ="50"
           className="text-xl font-bold text-neutral-600 dark:text-white"
         >
-          {title}
+        {title}
         </CardItem>
         <CardItem
           as="p"

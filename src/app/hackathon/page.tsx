@@ -18,6 +18,7 @@ export default function Hackotsav() {
   const [showParticles, setShowParticles] = useState(false);
   const [showModal, setShowModal] = useState(false);
   const [modalData, setModalData] = useState<CardData>({} as CardData);
+  const [keyData, setKeyData] = useState(0);
 
   interface CardData {
     title: string;
@@ -37,9 +38,10 @@ export default function Hackotsav() {
 
   useEffect(() => setShowParticles(true), []);
 
-  const handleModalOpen = (card: CardData) => {
+  const handleModalOpen = (card: CardData, cardKey: number) => {
     setModalData(card);
     setShowModal(true);
+    setKeyData(cardKey);
   };
 
   const handleModalClose = () => {
@@ -78,8 +80,9 @@ export default function Hackotsav() {
                 <ThreeDCard
                   key={index}
                   {...card}
+                  cardKey={index}
                   buttonText="View"
-                  onClick={() => handleModalOpen(card)}
+                  onClick={() => handleModalOpen(card, index)}
                 />
               ))}
             </div>
@@ -93,7 +96,7 @@ export default function Hackotsav() {
 
       {/* Modal Component */}
       <AnimatePresence>
-        {showModal && <Modal isOpen={showModal} onClose={handleModalClose} data={modalData} />}
+        {showModal && <Modal isOpen={showModal} onClose={handleModalClose} data={modalData} cardKey={keyData} />}
       </AnimatePresence>
     </div>
   );

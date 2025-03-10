@@ -34,7 +34,7 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "src/Components/Timer.jsx"
-  ],
+, "src/Components/expandable-card.jsx"  ],
   "exclude": [
     "node_modules"
   ]
