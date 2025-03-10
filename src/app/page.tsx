@@ -9,8 +9,8 @@ import Sponsors from "@/Components/Sponsors";
 import ComPats from "@/Components/ComPats";
 import Faq from "@/Components/Faq";
 import Navbar from "../Components/Navbar";
-// import Link from "next/link";
 import { SparklesCore } from "@/Components/ui/sparkles";
+import Button from "@/Components/ui/gotoBtn";
 
 export default function Home() {
   const [showParticles, setShowParticles] = useState(false);
@@ -20,9 +20,11 @@ export default function Home() {
   }, []);
 
   return (
+
     <div className="">
+
       {showParticles && (
-        <div className="w-full absolute inset-0 h-screen">
+        <div className="w-full absolute inset-0 h-full">
           <SparklesCore
             id="tsparticlesfullpage"
             background="transparent"
@@ -34,37 +36,37 @@ export default function Home() {
           />
         </div>
       )}
-      <Navbar />
-      <Hero title="TECHOTSAV2.0" />
-      <div className="px-5">
-        <br />
-        <About />
-        {/* <div className="text-center my-10">
-        <Link href="/hackathon">
-          <button className="bg-indigo-500 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded">
-            Go to Hackotsav 🚀
-          </button>
-        </Link>
-      </div> */}
-        <hr />
-        <br />
-        <Schedule />
-        <hr />
-        <br />
-        <Speakers />
-        <hr />
-        <br />
-        <Sponsors />
-        <hr />
-        <br />
-        <ComPats />
-        <br />
-        <hr />
-        <br />
-        <Faq />
-        <br />
-        <hr />
-        <br />
+      <div className="relative z-10">
+        <Navbar />
+        <Hero title="TECHOTSAV2.0" />
+        <div className="px-5">
+          <br />
+          <About />
+          <hr />
+          <br />
+          <div className="flex justify-center pb-7">
+            <Button title="Hackotsav" href="/hackathon" />
+          </div>
+          <hr />
+          <br />
+          <Schedule />
+          <hr />
+          <br />
+          <Speakers />
+          <hr />
+          <br />
+          <Sponsors />
+          <hr />
+          <br />
+          <ComPats />
+          <br />
+          <hr />
+          <br />
+          <Faq />
+          <br />
+          <hr />
+          <br />
+        </div>
       </div>
     </div>
   );
