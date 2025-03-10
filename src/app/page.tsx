@@ -10,6 +10,7 @@ import Faq from "@/Components/Faq";
 import Navbar from "../Components/Navbar";
 import { SparklesCore } from "@/Components/ui/sparkles";
 import Button from "@/Components/ui/gotoBtn";
+import Footer from "@/Components/Footer";
 
 export default function Home() {
 
@@ -87,8 +88,8 @@ export default function Home() {
           hands-on projects." />
           <hr />
           <br />
-          <div className="flex justify-center pb-7">
-            <Button title="Hackotsav" href="/hackathon" />
+          <div className="flex justify-center pb-5">
+            <Button title="🚀Head to Hackotsav" href="/hackathon" />
           </div>
           <hr />
           <br />
@@ -106,6 +107,10 @@ export default function Home() {
           <hr />
           <br />
           <Faq qna={techData}/>
+          <br />
+          <hr />
+          <br />
+          <Footer/>
           <br />
           <hr />
           <br />

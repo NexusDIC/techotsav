@@ -106,7 +106,7 @@ export const CloseIcon = () => {
   );
 };
 
-const cards = [
+const cards = [ 
   {
     description: "Lana Del Rey",
     title: "Summertime Sadness",
@@ -241,5 +241,4 @@ const cards = [
       );
     },
   },
-
 ];
