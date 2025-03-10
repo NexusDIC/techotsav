@@ -1,4 +1,4 @@
-import { desc } from "framer-motion/client";
+
 import Image from "next/image";
 import { FC } from "react";
 
