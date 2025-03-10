@@ -2,10 +2,17 @@
 
 import React, { useState, useRef } from "react";
 import { motion, useInView } from "framer-motion";
+import Image from "next/image";
 
 interface ScheduleItem {
   time: string;
   event: string;
+  speakers: speakerObj[];
+}
+
+interface speakerObj {
+  name: string;
+  pic: string;
 }
 
 interface ScheduleData {
@@ -14,29 +21,188 @@ interface ScheduleData {
 
 const schedule: ScheduleData = {
   day1: [
-    { time: "09:00 a.m. – 10:00 a.m", event: "Registration" },
-    { time: "10:00 a.m. – 10:15 a.m", event: "Lamp Lighting & Welcome" },
-    { time: "10:15 a.m. – 11:00 a.m", event: "Keynote Session 1" },
-    { time: "11:00 a.m. – 11:45 a.m", event: "Keynote Session 2" },
-    { time: "11:45 a.m. – 12:30 p.m", event: "Panel Discussion 1" },
-    { time: "12:30 p.m. – 01:15 p.m", event: "Lunch & Networking Break" },
-    { time: "01:15 p.m. – 04:15 p.m", event: "Workshop 1 and Workshop 2" },
-    { time: "04:15 p.m. – 04:30 p.m", event: "High-Tea Break" },
-    { time: "04:30 p.m. – 05:15 p.m", event: "Panel Discussion 2" },
-    { time: "05:15 p.m. – 05:30 p.m", event: "Conclusion of Day 1" },
+    {
+      time: "09:00 a.m. – 10:00 a.m",
+      event: "Registration",
+      speakers: [
+        {
+          name: "Speaker 1",
+          pic: "/imgs/logo.png",
+        },
+      ],
+    },
+    {
+      time: "10:00 a.m. – 10:15 a.m",
+      event: "Lamp Lighting & Welcome",
+      speakers: [
+        {
+          name: "Speaker 2",
+          pic: "/imgs/logo.png",
+        },
+      ],
+    },
+    {
+      time: "10:15 a.m. – 11:00 a.m",
+      event: "Keynote Session 1",
+      speakers: [
+        {
+          name: "Speaker 3",
+          pic: "/imgs/logo.png",
+        },
+      ],
+    },
+    {
+      time: "11:00 a.m. – 11:45 a.m",
+      event: "Keynote Session 2",
+      speakers: [
+        {
+          name: "Speaker 4",
+          pic: "/imgs/logo.png",
+        },
+      ],
+    },
+    {
+      time: "11:45 a.m. – 12:30 p.m",
+      event: "Panel Discussion 1",
+      speakers: [
+        {
+          name: "Speaker 5",
+          pic: "/imgs/logo.png",
+        },
+      ],
+    },
+    {
+      time: "12:30 p.m. – 01:15 p.m",
+      event: "Lunch & Networking Break",
+      speakers: [
+        {
+          name: "Speaker 6",
+          pic: "/imgs/logo.png",
+        },
+      ],
+    },
+    {
+      time: "01:15 p.m. – 04:15 p.m",
+      event: "Workshop 1 and Workshop 2",
+      speakers: [
+        {
+          name: "Speaker 7",
+          pic: "/imgs/logo.png",
+        },
+      ],
+    },
+    {
+      time: "04:15 p.m. – 04:30 p.m",
+      event: "High-Tea Break",
+      speakers: [
+        {
+          name: "Speaker 8",
+          pic: "/imgs/logo.png",
+        },
+      ],
+    },
+    {
+      time: "04:30 p.m. – 05:15 p.m",
+      event: "Panel Discussion 2",
+      speakers: [
+        {
+          name: "Speaker 9",
+          pic: "/imgs/logo.png",
+        },
+      ],
+    },
+    {
+      time: "05:15 p.m. – 05:30 p.m",
+      event: "Conclusion of Day 1",
+      speakers: [
+        {
+          name: "Speaker 10",
+          pic: "/imgs/logo.png",
+        },
+      ],
+    },
   ],
   day2: [
-    { time: "09:00 a.m. – 09:30 a.m", event: "Entry" },
-    { time: "09:30 a.m. – 12:30 p.m", event: "Workshop 3 & 4" },
-    { time: "12:30 p.m. – 01:15 p.m", event: "Lunch Break" },
+    {
+      time: "09:00 a.m. – 09:30 a.m",
+      event: "Entry",
+      speakers: [
+        {
+          name: "Speaker 11",
+          pic: "/imgs/logo.png",
+        },
+      ],
+    },
+    {
+      time: "09:30 a.m. – 12:30 p.m",
+      event: "Workshop 3 & 4",
+      speakers: [
+        {
+          name: "Speaker 12",
+          pic: "/imgs/logo.png",
+        },
+      ],
+    },
+    {
+      time: "12:30 p.m. – 01:15 p.m",
+      event: "Lunch Break",
+      speakers: [
+        {
+          name: "Speaker 13",
+          pic: "/imgs/logo.png",
+        },
+      ],
+    },
     {
       time: "01:15 p.m. – 02:00 p.m",
       event: "Employability Skills & Career Talk",
+      speakers: [
+        {
+          name: "Speaker 14",
+          pic: "/imgs/logo.png",
+        },
+      ],
     },
-    { time: "02:00 p.m. – 02:45 p.m", event: "Entrepreneurship Session" },
-    { time: "02:45 p.m. – 03:30 p.m", event: "Panel Discussion 3" },
-    { time: "03:30 p.m. – 04:15 p.m", event: "Memory Trainer Session" },
-    { time: "04:15 p.m. – 05:30 p.m", event: "Event Wrap-Up" },
+    {
+      time: "02:00 p.m. – 02:45 p.m",
+      event: "Entrepreneurship Session",
+      speakers: [
+        {
+          name: "Speaker 15",
+          pic: "/imgs/logo.png",
+        },
+      ],
+    },
+    {
+      time: "02:45 p.m. – 03:30 p.m",
+      event: "Panel Discussion 3",
+      speakers: [
+        {
+          name: "Speaker 16",
+          pic: "/imgs/logo.png",
+        },
+      ],
+    },
+    {
+      time: "03:30 p.m. – 04:15 p.m",
+      event: "Memory Trainer Session",
+      speakers: [
+        {
+          name: "Speaker 17",
+          pic: "/imgs/logo.png",
+        },
+      ],
+    },
+    {
+      time: "04:15 p.m. – 05:30 p.m",
+      event: "Event Wrap-Up",
+      speakers: [
+        {
+          name: "Speaker 18",
+          pic: "/imgs/logo.png",
+        },
+      ],
+    },
   ],
 };
 
@@ -47,6 +213,15 @@ const colors: string[] = [
   "text-red-500",
   "text-yellow-500",
   "text-pink-500",
+];
+
+const bgColors = [
+  "#3b82f6", // Blue-500
+  "#10b981", // Green-500
+  "#8b5cf6", // Purple-500
+  "#ef4444", // Red-500
+  "#eab308", // Yellow-500
+  "#ec4899", // Pink-500
 ];
 
 const ScheduleItemComponent: React.FC<{
@@ -74,6 +249,24 @@ const ScheduleItemComponent: React.FC<{
     >
       <h2 className="text-3xl font-bold text-center">{session.event}</h2>
       <p className="text-xl text-center">{session.time}</p>
+      <div className="flex">
+        {session.speakers.map((speaker, speakerIndex) => (
+          <div key={speakerIndex} className="flex items-center space-x-2">
+            <Image
+              width={50}
+              height={50}
+              src={speaker.pic}
+              alt={`${speaker.name} picture`}
+            />
+            <p
+              className={`text-xl text-center bg-opacity-50 text-white px-2 py-1 rounded-full`}
+              style={{ backgroundColor: bgColors[index % bgColors.length] }}
+            >
+              {speaker.name}
+            </p>
+          </div>
+        ))}
+      </div>
     </motion.div>
   );
 };

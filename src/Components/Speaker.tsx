@@ -12,12 +12,20 @@ import Autoplay from "embla-carousel-autoplay";
 
 export default function Speakers() {
   const speakers: string[] = [
-    "Your Mom",
-    "Your Sister",
-    "Your Sister's Bestie",
-    "Your English Madam",
-    "Your Ex",
-    "Your Ex's Bestie",
+    "Mr. Archit Chandak",
+    "Mr. Nitin Sachdeva",
+    "YMr. Varun Gandhi",
+    "Mr. Shivam Joshi",
+    "Mr. Anmol Ranjari",
+    "Mr. Aakash Singh",
+    "Mr. Vishnu Pillai",
+    "Mr. Rahul Manusmare",
+    "Ms. Sonal Shembhekar",
+    "Mr. Aniruddha Kalbande",
+    "Ms. Priyanka Sharma",
+    "Mrs.Nidhi Bawashe",
+    "Dr. Shekhar Patankar Sir",
+    "Dr. Shekhar Patankar Sir",
   ];
 
   return (
