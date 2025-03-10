@@ -152,7 +152,7 @@ export default function Hackotsav() {
             ))}
           </div>
 
-          <Sponsors />
+          {/* <Sponsors /> */}
           <Faq qna={hackthonData}  />
         </div>
       </div>
