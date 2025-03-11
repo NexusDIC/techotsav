@@ -12,7 +12,10 @@ import { SparklesCore } from "@/Components/ui/sparkles";
 import { useState, useEffect } from "react";
 import { AnimatePresence } from "framer-motion";
 import Footer from "@/Components/Footer";
+
 import Prizes from "./Prizes";
+
+// import {  } from "../../../public/imgs/Web3.jpg";
 
 export default function Hackotsav() {
   const [showParticles, setShowParticles] = useState(false);
@@ -35,21 +38,21 @@ export default function Hackotsav() {
     {
       title: "WebDev Mastery",
       description: "Innovate and explore the mysteries of development.",
-      image: "/imgs/logo.png",
+      image: "/imgs/webDevelopmentMastry.jpg",
       linkText: " ",
       linkUrl: "https://hackmaster.com",
     },
     {
       title: "Innovate with AI",
       description: "Explore the latest advancements in AI.",
-      image: "/imgs/logo.png",
+      image: "/imgs/AI.jpg",
       linkText: " ",
       linkUrl: "https://ai-innovations.com",
     },
     {
       title: "Web3 Revolution",
       description: "Unlock the potential of decentralized tech.",
-      image: "/imgs/logo.png",
+      image: "/imgs/Web3.jpg",
       linkText: " ",
       linkUrl: "https://web3future.com",
     },

@@ -43,8 +43,8 @@ const ThreeDCard: React.FC<CardProps> = ({
         <CardItem translateZ="100" className="mt-4">
           <Image
             src={image}
-            height={500}
-            width={500}
+            width={300}
+            height={200}
             className="max-w-full w-auto h-auto rounded-xl group-hover/card:shadow-xl"
             alt={title}
           />
