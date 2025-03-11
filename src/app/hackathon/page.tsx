@@ -12,6 +12,7 @@ import { SparklesCore } from "@/Components/ui/sparkles";
 import { useState, useEffect } from "react";
 import { AnimatePresence } from "framer-motion";
 import Footer from "@/Components/Footer";
+import Prizes from "./Prizes";
 
 export default function Hackotsav() {
   const [showParticles, setShowParticles] = useState(false);
@@ -157,7 +158,12 @@ export default function Hackotsav() {
         />
         <Dates />
         <hr />
-        <h1 className="text-5xl text-center lg:pt-9">Problem Statements</h1>
+        <br />
+        <Prizes />
+        <br />
+        < hr />
+        <br />
+        <h1 className="text-5xl text-center lg:pt-9 text-shadow-2">Problem Statements</h1>
         <div className="flex flex-wrap lg:gap-6 px-2 py-5 justify-center align-center">
           {cardData.map((card, index) => (
             <ThreeDCard

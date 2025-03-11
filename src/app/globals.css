@@ -128,3 +128,11 @@
 html {
   scroll-behavior: smooth;
 }
+
+.text-shadow {
+  text-shadow: 1px 1px 0.5px green;
+}
+
+.text-shadow-2 {
+  text-shadow: 1px 1px 0.5px green, 3px 3px 2px red;
+}

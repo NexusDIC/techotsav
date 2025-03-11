@@ -11,7 +11,7 @@ const About: FC<AboutProps> = ({ event, descripation, imgURL }) => {
   return (
     <div id="about" className="px-6 py-12 flex flex-col items-center">
       {/* Title */}
-      <h1 className="text-4xl sm:text-5xl text-center text-white font-bold mb-8">
+      <h1 className="text-4xl sm:text-5xl text-center text-white font-bold mb-8 text-shadow-2">
         What is {event}?
       </h1>
 

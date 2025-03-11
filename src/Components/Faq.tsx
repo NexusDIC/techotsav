@@ -19,7 +19,7 @@ interface FaqProps {
 export default function Faq({ qna }: FaqProps) {
   return (
     <div className="w-full flex flex-col items-center justify-center py-10" id="faq">
-      <h1 className="text-5xl text-center mb-6 font-bold">FAQs</h1>
+      <h1 className="text-5xl text-center mb-6 font-bold text-shadow-2">FAQs</h1>
       <Accordion type="single" collapsible className="w-full max-w-2xl">
         {qna.map((item, index) => (
           <AccordionItem key={index} value={`item-${index}`}>
