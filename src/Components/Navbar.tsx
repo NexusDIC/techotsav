@@ -15,13 +15,12 @@ const Navbar = () => {
 
   const links: NavLink[] = [
     { name: "About", href: "#about" },
-    {name: " Hackotsav", href: "/hackathon"},
+    { name: " Hackotsav", href: "/hackathon" },
     { name: "Schedule", href: "#schedule" },
     { name: "Speakers", href: "#speakers" },
     { name: "Sponsors", href: "#sponsors" },
     { name: "Community Partners", href: "#compats" },
     { name: "FAQ", href: "#faq" },
-   
   ];
 
   return (
@@ -30,12 +29,7 @@ const Navbar = () => {
         {/* Logo */}
         <div>
           <Link href="">
-            <Image
-              src="/imgs/better-logo.png"
-              alt="Logo"
-              height={50}
-              width={200}
-            />
+            <Image src="/imgs/logo.png" alt="Logo" height={50} width={200} />
           </Link>
         </div>
 
