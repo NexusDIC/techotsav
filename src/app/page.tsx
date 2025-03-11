@@ -9,11 +9,15 @@ import ComPats from "@/Components/ComPats";
 import Faq from "@/Components/Faq";
 import Navbar from "../Components/Navbar";
 import { SparklesCore } from "@/Components/ui/sparkles";
-import Button from "@/Components/ui/gotoBtn";
 import Footer from "@/Components/Footer";
 
 export default function Home() {
   const techData = [
+    {
+      question: "Will smith",
+      answer:
+        "Techotsav is open to students, faculty, industry professionals, and tech enthusiasts from various colleges and companies.",
+    },
     {
       question: "Who can attend Techotsav?",
       answer:
@@ -73,13 +77,17 @@ export default function Home() {
       )}
       <div className="relative z-10">
         <Navbar />
+
         <Hero
-          title="TECHOTSAV2.0"
           sub={sub}
-          date="21-22"
+          title="TECHOTSAV 2.0"
+          date="11-22"
           timer={true}
-          text="Techotsav 2.0"
-          btn={false}
+          text="Hackotsav"
+          btns={[
+            { title: "Register", href: "https://forms.gle/GrmBmRCRvog8x67R9" },
+            { title: "Explore Hackathon", href: "/hackathon" },
+          ]}
         />
         <div className="px-5">
           <br />
@@ -94,11 +102,7 @@ export default function Home() {
           hands-on projects."
             imgURL="/imgs/photo.png"
           />
-          <hr />
-          <br />
-          <div className="flex justify-center pb-5">
-            <Button title="🚀Head to Hackotsav" href="/hackathon" />
-          </div>
+
           <hr />
           <br />
           <Schedule />

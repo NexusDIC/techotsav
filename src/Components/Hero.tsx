@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 import { MarqueeText } from "./Marquee";
 import localFont from "next/font/local";
 import Timer from "./Timer";
-
 import Button from "@/Components/ui/gotoBtn";
 
 const hubotFont = localFont({
@@ -21,10 +20,13 @@ interface HeroProps {
   date: string;
   timer: boolean;
   text: string;
-  btn: boolean;
+  btns?: {
+    title: string;
+    href: string;
+  }[];
 }
 
-const Hero: React.FC<HeroProps> = ({ title, sub, date, timer, text, btn }) => {
+const Hero: React.FC<HeroProps> = ({ title, sub, date, timer, text, btns }) => {
   return (
     <div>
       <div className="h-[85dvh] px-5 flex flex-col justify-center items-center text-center">
@@ -55,7 +57,10 @@ const Hero: React.FC<HeroProps> = ({ title, sub, date, timer, text, btn }) => {
           >
             {date} March 2025
           </motion.div>
-          {btn && <Button title="Register Now" href="" />}
+          {btns &&
+            btns.map((btn, index) => (
+              <Button key={index} title={btn.title} href={btn.href} />
+            ))}
           <br />
           <motion.div
             initial={{ opacity: 0, y: 20 }}

@@ -42,7 +42,7 @@ const schedule: ScheduleData = {
     },
     {
       time: "10:15 a.m. – 11:00 a.m",
-      event: "Keynote Session 1",
+      event: "How to Protect Yourself in the maze of Cyber World?",
       speakers: [
         {
           name: "Speaker 3",
@@ -52,7 +52,7 @@ const schedule: ScheduleData = {
     },
     {
       time: "11:00 a.m. – 11:45 a.m",
-      event: "Keynote Session 2",
+      event: "Role of AI-driven products to transform business processes",
       speakers: [
         {
           name: "Speaker 4",
@@ -62,7 +62,7 @@ const schedule: ScheduleData = {
     },
     {
       time: "11:45 a.m. – 12:30 p.m",
-      event: "Panel Discussion 1",
+      event: "Cyber War-Fare: The Next Global Threat?",
       speakers: [
         {
           name: "Speaker 5",
@@ -82,7 +82,7 @@ const schedule: ScheduleData = {
     },
     {
       time: "01:15 p.m. – 04:15 p.m",
-      event: "Workshop 1 and Workshop 2",
+      event: "Data Visualization with PowerBI and Cyber Security",
       speakers: [
         {
           name: "Speaker 7",
@@ -102,7 +102,7 @@ const schedule: ScheduleData = {
     },
     {
       time: "04:30 p.m. – 05:15 p.m",
-      event: "Panel Discussion 2",
+      event: "Rise of LLM’s: Opportunities, Challenges and the Road Ahead",
       speakers: [
         {
           name: "Speaker 9",
@@ -124,7 +124,7 @@ const schedule: ScheduleData = {
   day2: [
     {
       time: "09:00 a.m. – 09:30 a.m",
-      event: "Entry",
+      event: "Day 2 Registration & Entry",
       speakers: [
         {
           name: "Speaker 11",
@@ -134,7 +134,7 @@ const schedule: ScheduleData = {
     },
     {
       time: "09:30 a.m. – 12:30 p.m",
-      event: "Workshop 3 & 4",
+      event: "Salesforce: CRM & Machine Learning Workshop",
       speakers: [
         {
           name: "Speaker 12",
@@ -174,7 +174,8 @@ const schedule: ScheduleData = {
     },
     {
       time: "02:45 p.m. – 03:30 p.m",
-      event: "Panel Discussion 3",
+      event:
+        "Collaboration and Innovation: Key to a High-Performing Supply Chain",
       speakers: [
         {
           name: "Speaker 16",
@@ -194,7 +195,7 @@ const schedule: ScheduleData = {
     },
     {
       time: "04:15 p.m. – 05:30 p.m",
-      event: "Event Wrap-Up",
+      event: "Valedictory",
       speakers: [
         {
           name: "Speaker 18",
@@ -213,8 +214,6 @@ const colors: string[] = [
   "text-yellow-500",
   "text-pink-500",
 ];
-
-
 
 const ScheduleItemComponent: React.FC<{
   session: ScheduleItem;

@@ -3,7 +3,7 @@
 import Hero from "@/Components/Hero";
 import About from "@/Components/About";
 import Dates from "./Dates";
-//import Sponsors from "@/Components/Sponsors";
+// import Sponsors from "@/Components/Sponsors";
 import Faq from "@/Components/Faq";
 import Navbar from "@/Components/Navbar";
 import ThreeDCard from "@/Components/ThreeDCard";
@@ -18,6 +18,7 @@ export default function Hackotsav() {
   const [showModal, setShowModal] = useState(false);
   const [modalData, setModalData] = useState<CardData>({} as CardData);
   const [keyData, setKeyData] = useState(0);
+
   const sub =
     "Innovate, code, compete, and solve real-world challenges in Techotsav’s dynamic hackathon.";
 
@@ -66,7 +67,8 @@ export default function Hackotsav() {
       linkUrl: "https://cloudtech.com",
     },
   ];
-  const hackthonData = [
+
+  const hackathonData = [
     {
       question: "How many participants are allowed in a hackathon team?",
       answer:
@@ -138,40 +140,38 @@ export default function Hackotsav() {
 
       <div className="relative z-10 pt-20">
         <Hero
-          btn={true}
-          title="HACKOTSAV"
           sub={sub}
+          title="HACKOTSAV"
           date="11-22"
           timer={false}
-          text="Hackotsav"
+          text="HACKOTSAV"
+          btns={[{ title: "Register", href: "" }]}
         />
-        <div className="px-5">
-          <About
-            event="HACKOTSAV"
-            descripation="Techotsav 2025 presents an adrenaline-fueled hackathon where creativity meets problem-solving. Over two days, participants will tackle real-world challenges in domains like AI, Cybersecurity, IoT, and Cloud Computing. Guided by expert mentors, teams will brainstorm, develop, and present groundbreaking solutions, competing for exciting prizes and recognition. Whether you're a seasoned coder or a tech enthusiast, this hackathon is your stage to build, innovate, and disrupt."
-            imgURL="/imgs/hackathon-poster.png"
-          />
-          <Dates />
-          <hr />
-          <h1 className="text-5xl text-center lg:pt-9">Problem Statements</h1>
-          <div className="flex flex-wrap lg:gap-6 px-2 py-5 justify-center align-center">
-            {cardData.map((card, index) => (
-              <ThreeDCard
-                key={index}
-                {...card}
-                cardKey={index}
-                buttonText="View"
-                onClick={() => handleModalOpen(card, index)}
-              />
-            ))}
-          </div>
-
-          {/* <Sponsors /> */}
-          <Faq qna={hackthonData} />
-        </div>
       </div>
 
-      {/* Modal Component */}
+      <div className="px-5">
+        <About
+          event="HACKOTSAV"
+          descripation="Techotsav 2025 presents an adrenaline-fueled hackathon where creativity meets problem-solving. Over two days, participants will tackle real-world challenges in domains like AI, Cybersecurity, IoT, and Cloud Computing. Guided by expert mentors, teams will brainstorm, develop, and present groundbreaking solutions, competing for exciting prizes and recognition. Whether you're a seasoned coder or a tech enthusiast, this hackathon is your stage to build, innovate, and disrupt."
+          imgURL="/imgs/hackathon-poster.png"
+        />
+        <Dates />
+        <hr />
+        <h1 className="text-5xl text-center lg:pt-9">Problem Statements</h1>
+        <div className="flex flex-wrap lg:gap-6 px-2 py-5 justify-center align-center">
+          {cardData.map((card, index) => (
+            <ThreeDCard
+              key={index}
+              {...card}
+              cardKey={index}
+              buttonText="View"
+              onClick={() => handleModalOpen(card, index)}
+            />
+          ))}
+        </div>
+        <Faq qna={hackathonData} />
+      </div>
+
       <AnimatePresence>
         {showModal && (
           <Modal
@@ -182,6 +182,7 @@ export default function Hackotsav() {
           />
         )}
       </AnimatePresence>
+
       <br />
       <hr />
       <br />
