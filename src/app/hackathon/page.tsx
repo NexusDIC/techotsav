@@ -3,7 +3,7 @@
 import Hero from "@/Components/Hero";
 import About from "@/Components/About";
 import Dates from "./Dates";
-import Sponsors from "@/Components/Sponsors";
+//import Sponsors from "@/Components/Sponsors";
 import Faq from "@/Components/Faq";
 import Navbar from "@/Components/Navbar";
 import ThreeDCard from "@/Components/ThreeDCard";
@@ -18,7 +18,8 @@ export default function Hackotsav() {
   const [showModal, setShowModal] = useState(false);
   const [modalData, setModalData] = useState<CardData>({} as CardData);
   const [keyData, setKeyData] = useState(0);
-  const sub = "Innovate, code, compete, and solve real-world challenges in Techotsav’s dynamic hackathon.";
+  const sub =
+    "Innovate, code, compete, and solve real-world challenges in Techotsav’s dynamic hackathon.";
 
   interface CardData {
     title: string;
@@ -67,34 +68,40 @@ export default function Hackotsav() {
   ];
   const hackthonData = [
     {
-      "question": "How many participants are allowed in a hackathon team?",
-      "answer": "Each team can have a minimum of 2 and a maximum of 4 participants."
+      question: "How many participants are allowed in a hackathon team?",
+      answer:
+        "Each team can have a minimum of 2 and a maximum of 4 participants.",
     },
     {
-      "question": "What type of hackathon is this?",
-      "answer": "Techotsav's hackathon is an industry-level challenge where participants develop innovative solutions to real-world problems."
+      question: "What type of hackathon is this?",
+      answer:
+        "Techotsav's hackathon is an industry-level challenge where participants develop innovative solutions to real-world problems.",
     },
     {
-      "question": "Do I need specific skills to participate in the hackathon?",
-      "answer": "No specific skills are required. However, knowledge of coding, problem-solving, and teamwork is beneficial."
+      question: "Do I need specific skills to participate in the hackathon?",
+      answer:
+        "No specific skills are required. However, knowledge of coding, problem-solving, and teamwork is beneficial.",
     },
     {
-      "question": "What are the themes for the hackathon problem statements?",
-      "answer": "The hackathon will include challenges based on AI, cybersecurity, IoT, cloud computing, and more."
+      question: "What are the themes for the hackathon problem statements?",
+      answer:
+        "The hackathon will include challenges based on AI, cybersecurity, IoT, cloud computing, and more.",
     },
     {
-      "question": "Can participants directly connect with speakers?",
-      "answer": "Yes, there will be networking sessions and opportunities to interact with speakers."
+      question: "Can participants directly connect with speakers?",
+      answer:
+        "Yes, there will be networking sessions and opportunities to interact with speakers.",
     },
     {
-      "question": "Is there a minimum female participation requirement in teams?",
-      "answer": "No, there is no mandatory female participation requirement, but diverse teams are encouraged."
+      question: "Is there a minimum female participation requirement in teams?",
+      answer:
+        "No, there is no mandatory female participation requirement, but diverse teams are encouraged.",
     },
     {
-      "question": "Will on-the-spot registration be available?",
-      "answer": "No, all participants must register in advance to secure their spot."
+      question: "Will on-the-spot registration be available?",
+      answer:
+        "No, all participants must register in advance to secure their spot.",
     },
-
   ];
 
   useEffect(() => setShowParticles(true), []);
@@ -131,6 +138,7 @@ export default function Hackotsav() {
 
       <div className="relative z-10 pt-20">
         <Hero
+          btn={true}
           title="HACKOTSAV"
           sub={sub}
           date="11-22"
@@ -138,12 +146,15 @@ export default function Hackotsav() {
           text="Hackotsav"
         />
         <div className="px-5">
-          <About event="HACKOTSAV" descripation="Techotsav 2025 presents an adrenaline-fueled hackathon where creativity meets problem-solving. Over two days, participants will tackle real-world challenges in domains like AI, Cybersecurity, IoT, and Cloud Computing. Guided by expert mentors, teams will brainstorm, develop, and present groundbreaking solutions, competing for exciting prizes and recognition. Whether you're a seasoned coder or a tech enthusiast, this hackathon is your stage to build, innovate, and disrupt." imgURL="/imgs/hackathon-poster.png" />
+          <About
+            event="HACKOTSAV"
+            descripation="Techotsav 2025 presents an adrenaline-fueled hackathon where creativity meets problem-solving. Over two days, participants will tackle real-world challenges in domains like AI, Cybersecurity, IoT, and Cloud Computing. Guided by expert mentors, teams will brainstorm, develop, and present groundbreaking solutions, competing for exciting prizes and recognition. Whether you're a seasoned coder or a tech enthusiast, this hackathon is your stage to build, innovate, and disrupt."
+            imgURL="/imgs/hackathon-poster.png"
+          />
           <Dates />
           <hr />
           <h1 className="text-5xl text-center lg:pt-9">Problem Statements</h1>
           <div className="flex flex-wrap lg:gap-6 px-2 py-5 justify-center align-center">
-            
             {cardData.map((card, index) => (
               <ThreeDCard
                 key={index}
@@ -156,7 +167,7 @@ export default function Hackotsav() {
           </div>
 
           {/* <Sponsors /> */}
-          <Faq qna={hackthonData}  />
+          <Faq qna={hackthonData} />
         </div>
       </div>
 
@@ -174,7 +185,7 @@ export default function Hackotsav() {
       <br />
       <hr />
       <br />
-      <Footer/>
+      <Footer />
       <br />
       <hr />
       <br />

@@ -23,12 +23,17 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="sticky top-0 w-full bg-white/10 backdrop-blur-md shadow-lg z-50">
+    <nav className="sticky top-0 w-full bg-white/10 backdrop-blur-md shadow-lg ">
       <div className="flex justify-between items-center p-5 md:px-10">
         {/* Logo */}
         <div>
-          <Link href="/">
-            <Image src="/imgs/logo.png" alt="Logo" height={50} width={200} />
+          <Link href="">
+            <Image
+              src="/imgs/better-logo.png"
+              alt="Logo"
+              height={50}
+              width={200}
+            />
           </Link>
         </div>
 
