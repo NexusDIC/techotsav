@@ -20,7 +20,7 @@ export default function Speakers() {
   const speakers: Speaker[] = [
     {
       name:"Mr. Archit Chandak",
-      image:"/imgs/archit_chandak.jpg"
+      image:"/imgs/Mr. Archit Chandak...png"
     },
     {
       name : "Mr. Nitin Sachdeva",
@@ -45,7 +45,7 @@ export default function Speakers() {
     // "Dr. Shekhar Patankar Sir",
     {
       name: "Dr. Sachin Untawale",
-      image:"/imgs/sachin_untawale.jpg"
+      image:"/imgs/dr-sachin-untawale.jpg"
     }
   ];
 
