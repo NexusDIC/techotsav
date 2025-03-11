@@ -85,7 +85,6 @@ const SponsorCard: React.FC<{ name: string; index: number; img: string }> = ({
     >
       <Card className="text-white shadow-lg p-4 flex flex-col items-center">
         <CardHeader className="flex flex-col items-center justify-center">
-          {/* Centering Image */}
           <CardDescription className="flex justify-center items-center">
             <Image 
               src={img} 
