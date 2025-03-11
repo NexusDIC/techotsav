@@ -15,11 +15,13 @@ const Navbar = () => {
 
   const links: NavLink[] = [
     { name: "About", href: "#about" },
+    {name: " Hackotsav", href: "/hackathon"},
     { name: "Schedule", href: "#schedule" },
     { name: "Speakers", href: "#speakers" },
     { name: "Sponsors", href: "#sponsors" },
     { name: "Community Partners", href: "#compats" },
     { name: "FAQ", href: "#faq" },
+   
   ];
 
   return (
