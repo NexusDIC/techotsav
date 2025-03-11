@@ -1,13 +1,13 @@
-
 import Image from "next/image";
 import { FC } from "react";
 
 interface AboutProps {
   event: string;
   descripation: string;
-  imgURL:string;
+  imgURL: string;
 }
-const About: FC<AboutProps> = ({ event,descripation, imgURL }) => {
+
+const About: FC<AboutProps> = ({ event, descripation, imgURL }) => {
   return (
     <div id="about" className="px-6 py-12 flex flex-col items-center">
       {/* Title */}
@@ -28,7 +28,7 @@ const About: FC<AboutProps> = ({ event,descripation, imgURL }) => {
 
         {/* Description */}
         <div className="text-gray-300 mt-6 lg:mt-0 text-center sm:text-left max-w-xl leading-8 text-lg sm:text-xl lg:text-2xl">
-         {descripation}
+          {descripation}
         </div>
       </div>
     </div>
