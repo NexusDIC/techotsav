@@ -238,7 +238,7 @@ const ScheduleItemComponent: React.FC<{
         colors[index % colors.length]
       }`}
     >
-      <h2 className="text-3xl font-bold text-center">{session.event}</h2>
+      <h2 className="text-3xl font-bold text-center text-shadow">{session.event}</h2>
       <p className="text-xl text-center">{session.time}</p>
       <div className="flex">
         {/* {session.speakers.map((speaker, speakerIndex) => (
