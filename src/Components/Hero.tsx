@@ -29,7 +29,7 @@ interface HeroProps {
 const Hero: React.FC<HeroProps> = ({ title, sub, date, timer, text, btns }) => {
   return (
     <div>
-      <div className="h-[85dvh] px-5 flex flex-col justify-center items-center text-center">
+      <div className="h-[95dvh] px-5 flex flex-col justify-center items-center text-center">
         <div className="main max-w-6xl">
           <motion.h1
             className={`text-[2.6rem] md:text-8xl lg:text-9xl ${monotonFont.className} text-green-600 cursor-default select-none`}
