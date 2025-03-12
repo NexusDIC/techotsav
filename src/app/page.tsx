@@ -15,7 +15,7 @@ import Sponsors from "@/Components/Sponsors";
 export default function Home() {
   const techData = [
     {
-      question: "Will smith",
+      question: "Who can participate in Techotsav?",
       answer:
         "Techotsav is open to students, faculty, industry professionals, and tech enthusiasts from various colleges and companies.",
     },
