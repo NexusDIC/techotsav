@@ -12,7 +12,7 @@ const Sponsors = () => {
 
   const compats: Partener[] = [
     {
-      name: "Micorsoft",
+      name: "Microsoft",
       image: "/imgs/microsoft-logo.png",
     },
     {
