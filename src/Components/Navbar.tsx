@@ -15,7 +15,7 @@ const Navbar = () => {
 
   const links: NavLink[] = [
     { name: "About", href: "#about" },
-    { name: " Hackotsav", href: "/hackathon" },
+    { name: "Hackotsav", href: "https://techotsavghrce.netlify.app/hackathon" },
     { name: "Schedule", href: "#schedule" },
     { name: "Speakers", href: "#speakers" },
     { name: "Sponsors", href: "#sponsors" },
@@ -24,7 +24,7 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="sticky top-0 w-full bg-white/10 backdrop-blur-md shadow-lg ">
+    <nav className="sticky top-0 w-full bg-white/10 backdrop-blur-md shadow-lg z-99">
       <div className="flex justify-between items-center p-5 md:px-10">
         {/* Logo */}
         <div>
