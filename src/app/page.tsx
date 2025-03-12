@@ -81,7 +81,7 @@ export default function Home() {
         <Hero
           sub={sub}
           title="TECHOTSAV 2.0"
-          date="21-22"
+          date="11-22"
           timer={true}
           text="Hackotsav"
           btns={[

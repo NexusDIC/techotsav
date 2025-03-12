@@ -15,7 +15,7 @@ const Navbar = () => {
 
   const links: NavLink[] = [
     { name: "About", href: "#about" },
-    { name: "Hackotsav", href: "https://techotsavghrce.netlify.app/hackathon" },
+    { name: "Hackotsav", href: "/hackathon" },
     { name: "Schedule", href: "#schedule" },
     { name: "Speakers", href: "#speakers" },
     { name: "Sponsors", href: "#sponsors" },
@@ -33,7 +33,6 @@ const Navbar = () => {
           </Link>
         </div>
 
-        {/* Desktop Links */}
         <div className="hidden md:flex space-x-6">
           {links.map((link) => (
             <Link
