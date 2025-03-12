@@ -2,6 +2,7 @@
 
 import { Card, CardContent } from "./ui/card";
 import Image from "next/image"
+// import {  } from "../../public/imgs/Rajendra J.jpeg";
 import {
   Carousel,
   CarouselContent,
@@ -28,7 +29,7 @@ export default function Speakers() {
     },
     {
       name: "Mr. Nitin Sachdeva",
-      image: "/imgs/nitin_sachideva.jpg",
+      image: "/imgs/Nitin s.png",
       post: "President and MD",
       Company: "delaPlex, Nagpur"
     },
@@ -40,7 +41,7 @@ export default function Speakers() {
     },
     {
       name: "Mr. Aniruddha Kalbande",
-      image: "/imgs/aniruddha_kalbande.jpg",
+      image: "/imgs/Aniruddha Kalbande.jpg",
       post: "Founder FireBlaze",
       Company: "AISchool"
     },
@@ -75,7 +76,7 @@ export default function Speakers() {
       Company: "Deloitte"
     },
     // {
-    //   name: "Tanmay Bhatt",
+    //   name: "Tanmay Bhat",
     //   image: "",
     //   post: "Assistant Lead Engineer",
     //   Company: "Konverge AI"
@@ -104,12 +105,12 @@ export default function Speakers() {
     //   post: "Head of Delivery and Client Engagement",
     //   Company: "Konverge.AI"
     // },
-    // {
-    //   name: "Rajendra Jodhpurkar",
-    //   image: "",
-    //   post: "CIO",
-    //   Company: "Infocepts"
-    // }
+    {
+      name: "Rajendra Jodhpurkar",
+      image: "/imgs/Rajendra J.jpeg",
+      post: "CIO",
+      Company: "Infocepts"
+    }
   ];
 
   return (
