@@ -87,7 +87,7 @@ export default function Home() {
           text="Hackotsav"
           btns={[
             { title: "Register", href: "https://forms.gle/GrmBmRCRvog8x67R9" },
-            { title: "Explore Hackathon", href: "/hackathon" },
+            /* { title: "Explore Hackathon", href: "/hackathon" }, */
           ]}
         />
         <div className="px-5">
