@@ -12,23 +12,19 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-    title: "Hackotsav",
-    description: "Hackathon!!",
-    
-  };
+  title: "Hackotsav",
+  description: "Hackathon!!",
+};
 
-export default function RootLayout({
+export default function HackathonLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className="dark">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased cursor-default `}
-      >
-        <div className="">{children}</div>
-      </body>
-    </html>
+    <div
+      className={`${geistSans.variable} ${geistMono.variable} antialiased cursor-default min-h-screen`}
+    >
+      {children}
+    </div>
   );
 }
+

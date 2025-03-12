@@ -79,7 +79,7 @@ export default function Speakers() {
         <CarouselContent>
           {speakers.map((speaker, index) => (
             <CarouselItem key={index} className="flex justify-center">
-             <Card className="w-full max-w-md sm:max-w-lg md:max-w-sm lg:max-w-sm  border-2 border-gray-300 shadow-lg shadow-white rounded-lg   ">
+             <Card className="w-full max-w-md sm:max-w-lg md:max-w-sm lg:max-w-sm  border-2 border-gray-300 shadow-xl shadow-white rounded-3xl   ">
   <CardContent className="flex flex-col items-center justify-center p-6 space-y-2 text-center">
     <Image
       src={speaker.image}
@@ -92,8 +92,6 @@ export default function Speakers() {
     <span className="text-xl sm:text-3xl md:text-5xl lg:text-4xl font-semibold">
       {speaker.name}
     </span>
-
-    {/* Post - Smallest */}
     <span className="text-xl sm:text-base md:text-lg lg:text-2xl font-medium">
       {speaker.post}
     </span>
