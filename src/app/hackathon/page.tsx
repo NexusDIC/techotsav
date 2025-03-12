@@ -15,7 +15,7 @@ import Footer from "@/Components/Footer";
 
 import Prizes from "./Prizes";
 
-// import {  } from "../../../public/imgs/Web3.jpg";
+// import {  } from "../../../public/imgs/CyberSecurity.png";
 
 export default function Hackotsav() {
   const [showParticles, setShowParticles] = useState(false);
@@ -59,7 +59,7 @@ export default function Hackotsav() {
     {
       title: "Cybersecurity Insights",
       description: "Master the art of digital protection.",
-      image: "/imgs/logo.png",
+      image: "/imgs/CyberSecurity.png",
       linkText: " ",
       linkUrl: "https://cybersecuritytoday.com",
     },
