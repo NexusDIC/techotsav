@@ -10,6 +10,7 @@ import Faq from "@/Components/Faq";
 import Navbar from "../Components/Navbar";
 import { SparklesCore } from "@/Components/ui/sparkles";
 import Footer from "@/Components/Footer";
+import Sponsors from "@/Components/Sponsors";
 
 export default function Home() {
   const techData = [
@@ -111,9 +112,9 @@ export default function Home() {
           <Speakers />
           <hr />
           <br />
-          {/* <Sponsors /> */}
-          {/* <hr />
-          <br /> */}
+          <Sponsors />
+          <hr />
+          <br />
           <ComPats />
           <br />
           <hr />
