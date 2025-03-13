@@ -2,7 +2,7 @@
 
 import { Card, CardContent } from "./ui/card";
 import Image from "next/image"
-// import {  } from "../../public/imgs/Rajendra J.jpeg";
+// import {  } from "../../public/imgs/Tanmay B.png";
 import {
   Carousel,
   CarouselContent,
@@ -75,30 +75,30 @@ export default function Speakers() {
       post: "Consultant (Strategy and Analytics)",
       Company: "Deloitte"
     },
-    // {
-    //   name: "Tanmay Bhat",
-    //   image: "",
-    //   post: "Assistant Lead Engineer",
-    //   Company: "Konverge AI"
-    // },
+    {
+      name: "Tanmay Bhat",
+      image: "/imgs/Tanmay B.png",
+      post: "Assistant Lead Engineer",
+      Company: "Konverge AI"
+    },
     {
       name: "Shivam Joshi",
       image: "/imgs/shivam j.jpeg",
       post: "Founder",
       Company: "Codons"
     },
-    // {
-    //   name: "Priyanka Sharma",
-    //   image: "",
-    //   post: "Skill Trainer",
-    //   Company: ""
-    // },
-    // {
-    //   name: "Nidhi Bawashe",
-    //   image: "",
-    //   post: "Project Manager",
-    //   Company: "DelaPlex"
-    // },
+    {
+      name: "Priyanka Sharma",
+      image: "/imgs/Priyanka s.jpeg",
+      post: "Skill Trainer",
+      Company: ""
+    },
+    {
+      name: "Nidhi Bawashe",
+      image: "/imgs/Nidhi B.png",
+      post: "Project Manager",
+      Company: "DelaPlex"
+    },
     // {
     //   name: "Sajal Saxena",
     //   image: "",
