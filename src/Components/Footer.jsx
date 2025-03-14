@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 const Footer = () => {
   return (
@@ -15,7 +15,11 @@ const Footer = () => {
       <nav className="text-center md:text-left">
         <h6 className="footer-title pb-2 font-bold">Social</h6>
         <div className="flex justify-center md:justify-start gap-4">
-          <a href="https://chat.whatsapp.com/GuafCx4t7jR9POiguxHII3" target="_blank" rel="noopener noreferrer">
+          <a
+            href="https://chat.whatsapp.com/GuafCx4t7jR9POiguxHII3"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <img
               src="https://cdn-icons-png.flaticon.com/512/733/733585.png"
               alt="WhatsApp"
@@ -24,7 +28,11 @@ const Footer = () => {
               className="invert"
             />
           </a>
-          <a href="https://www.instagram.com/techotsav_ghrce" target="_blank" rel="noopener noreferrer">
+          <a
+            href="https://www.instagram.com/techotsav_ghrce"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <img
               src="https://cdn-icons-png.flaticon.com/512/2111/2111491.png"
               alt="Instagram"
@@ -33,7 +41,11 @@ const Footer = () => {
               className="invert"
             />
           </a>
-          <a href="https://discord.gg/sNsBwMTsQj" target="_blank" rel="noopener noreferrer">
+          <a
+            href="https://discord.gg/PfYpPnmB9d"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <img
               src="https://cdn-icons-png.flaticon.com/512/5968/5968756.png"
               alt="Discord"

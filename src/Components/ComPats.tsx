@@ -12,26 +12,6 @@ const ComPats = () => {
 
   const compats: Partener[] = [
     {
-      name: "Event Buzz",
-      image: "/imgs/event-buzz.jpg",
-    },
-    {
-      name: "IEEE Cummins",
-      image: "/imgs/ieee-cummins.jpg",
-    },
-    {
-      name: "IEEE CS",
-      image: "/imgs/ieee-cs-logo.jpg",
-    },
-    {
-      name: "Nexmeet",
-      image: "/imgs/nexmeet-transparent.png",
-    },
-    {
-      name: "THM",
-      image: "/imgs/THM.png",
-    },
-    {
       name: "CoE of Cloud Computing",
       image: "/imgs/coe-cc.png",
     },
@@ -51,10 +31,38 @@ const ComPats = () => {
       name: "CoE Machine Learning and Robotics",
       image: "/imgs/coe-ml.png",
     },
+    {
+      name: "Event Buzz",
+      image: "/imgs/event-buzz.jpg",
+    },
+    {
+      name: "IEEE Cummins",
+      image: "/imgs/ieee-cummins.jpg",
+    },
+    {
+      name: "IEEE CS GHRCE",
+      image: "/imgs/ieee-cs-logo.jpg",
+    },
+    {
+      name: "Nexmeet",
+      image: "/imgs/nexmeet-transparent.png",
+    },
+    {
+      name: "THM",
+      image: "/imgs/THM.png",
+    },
+    {
+      name: "Theory 2 Practical",
+      image: "/imgs/t2p-logo.png",
+    },
+    {
+      name: "Openbox",
+      image: "/imgs/openbox-logo.png",
+    },
   ];
 
   return (
-    <div className="px-5 py-10">
+    <div className="px-5 py-10" id="compats">
       <h1 className="text-3xl sm:text-4xl md:text-5xl text-center text-white font-bold">
         Our Partners
       </h1>

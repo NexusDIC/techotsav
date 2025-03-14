@@ -26,7 +26,7 @@ const Sponsors = () => {
   ];
 
   return (
-    <div className="px-5 py-10">
+    <div className="px-5 py-10" id="sponsors">
       <h1 className="text-3xl sm:text-4xl md:text-5xl text-center text-white font-bold">
         Sponsors
       </h1>

@@ -77,7 +77,7 @@ export default function Home() {
         </div>
       )}
       <div className="relative z-50">
-        <Navbar />
+        <Navbar hackotsav={true} />
 
         <Hero
           sub={sub}

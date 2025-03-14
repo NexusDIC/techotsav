@@ -5,7 +5,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
 
-const Navbar = () => {
+interface NavbarProps {
+  hackotsav?: boolean;
+}
+
+const Navbar = ({ hackotsav }: NavbarProps) => {
   interface NavLink {
     name: string;
     href: string;
@@ -13,15 +17,24 @@ const Navbar = () => {
 
   const [isOpen, setIsOpen] = useState(false);
 
-  const links: NavLink[] = [
-    { name: "About", href: "#about" },
-    { name: "Hackotsav", href: "/hackathon" },
-    { name: "Schedule", href: "#schedule" },
-    { name: "Speakers", href: "#speakers" },
-    { name: "Sponsors", href: "#sponsors" },
-    { name: "Community Partners", href: "#compats" },
-    { name: "FAQ", href: "#faq" },
-  ];
+  const links: NavLink[] = hackotsav
+    ? [
+        { name: "About", href: "#about" },
+        { name: "Hackotsav", href: "/hackathon" },
+        { name: "Schedule", href: "#schedule" },
+        { name: "Speakers", href: "#speakers" },
+        { name: "Sponsors", href: "#sponsors" },
+        { name: "Community Partners", href: "#compats" },
+        { name: "FAQ", href: "#faq" },
+      ]
+    : [
+        { name: "About", href: "#about" },
+        { name: "Techotsav", href: "/" },
+        { name: "Schedule", href: "#schedule" },
+        { name: "Sponsors", href: "/#sponsors" },
+        { name: "Community Partners", href: "/#compats" },
+        { name: "FAQ", href: "#faq" },
+      ];
 
   return (
     <nav className="sticky top-0 w-full bg-white/10 backdrop-blur-md shadow-lg z-99">

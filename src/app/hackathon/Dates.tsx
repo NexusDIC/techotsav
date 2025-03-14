@@ -14,11 +14,11 @@ const schedule: ScheduleItem[] = [
     name: "Release of Problem Statements",
   },
   {
-    date: "15-03-25",
+    date: "18-03-25",
     name: "PPT Submission",
   },
   {
-    date: "17-03-25",
+    date: "19-03-25",
     name: "List of Selected Ideas",
   },
   {
@@ -55,7 +55,9 @@ const ScheduleItemComponent: React.FC<{
         colors[index % colors.length]
       }`}
     >
-      <h2 className="text-3xl font-bold text-center text-shadow">{session.name}</h2>
+      <h2 className="text-3xl font-bold text-center text-shadow">
+        {session.name}
+      </h2>
       <p className="text-xl text-center">{session.date}</p>
     </motion.div>
   );
@@ -63,7 +65,7 @@ const ScheduleItemComponent: React.FC<{
 
 const Schedule: React.FC = () => {
   return (
-    <div className="max-w-4xl mx-auto p-6">
+    <div className="max-w-4xl mx-auto p-6" id="schedule">
       <h1 className="text-5xl text-center text-white mb-6 text-shadow-2">
         Hackathon Schedule
       </h1>

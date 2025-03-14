@@ -3,7 +3,6 @@
 import Hero from "@/Components/Hero";
 import About from "@/Components/About";
 import Dates from "./Dates";
-// import Sponsors from "@/Components/Sponsors";
 import Faq from "@/Components/Faq";
 import Navbar from "@/Components/Navbar";
 import ThreeDCard from "@/Components/ThreeDCard";
@@ -149,7 +148,9 @@ export default function Hackotsav() {
           date="11-22"
           timer={false}
           text="HACKOTSAV"
-          btns={[{ title: "Register", href: "" }]}
+          btns={[
+            { title: "Register", href: "https://forms.gle/AhMWPCH7712egj9q8" },
+          ]}
         />
       </div>
 
@@ -164,9 +165,11 @@ export default function Hackotsav() {
         <br />
         <Prizes />
         <br />
-        < hr />
+        <hr />
         <br />
-        <h1 className="text-5xl text-center lg:pt-9 text-shadow-2">Problem Statements</h1>
+        <h1 className="text-5xl text-center lg:pt-9 text-shadow-2">
+          Problem Statements
+        </h1>
         <div className="flex flex-wrap lg:gap-6 px-2 py-5 justify-center align-center">
           {cardData.map((card, index) => (
             <ThreeDCard
