@@ -32,20 +32,16 @@ const ComPats = () => {
       image: "/imgs/coe-ml.png",
     },
     {
+      name: "Event Buzz",
+      image: "/imgs/event-buzz.jpg",
+    },
+    {
       name: "IEEE Cummins",
       image: "/imgs/ieee-cummins.jpg",
     },
     {
       name: "IEEE CS GHRCE",
       image: "/imgs/ieee-cs-logo.jpg",
-    },
-    {
-      name: "Openbox",
-      image: "/imgs/openbox-logo.png",
-    },
-    {
-      name: "Event Buzz",
-      image: "/imgs/event-buzz.jpg",
     },
     {
       name: "Nexmeet",
@@ -59,7 +55,10 @@ const ComPats = () => {
       name: "Theory 2 Practical",
       image: "/imgs/t2p-logo.png",
     },
-    
+    {
+      name: "Openbox",
+      image: "/imgs/openbox-logo.png",
+    },
   ];
 
   return (
