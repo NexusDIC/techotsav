@@ -60,7 +60,7 @@ export default function Speakers() {
         "https://www.linkedin.com/in/sachin-untawale-17504274/?originalSubdomain=in",
     },
     {
-      name: "Amol Ranjari",
+      name: "Amol Rangari",
       image: "/imgs/Anmol r.jpeg",
       post: "CYBER SECURITY EXPERT",
       Company: "ETHICAL HACKER ",

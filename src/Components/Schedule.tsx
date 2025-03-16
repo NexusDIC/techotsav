@@ -82,7 +82,7 @@ const schedule: ScheduleData = {
     },
     {
       time: "01:15 p.m. – 04:15 p.m",
-      event: "Data Visualization with PowerBI and Cyber Security",
+      event: "ML and Cyber Security",
       speakers: [
         {
           name: "Speaker 7",
@@ -134,7 +134,7 @@ const schedule: ScheduleData = {
     },
     {
       time: "09:30 a.m. – 12:30 p.m",
-      event: "Salesforce: CRM & Machine Learning Workshop",
+      event: "Salesforce: CRM & Data Visualization with PowerBI",
       speakers: [
         {
           name: "Speaker 12",
@@ -238,7 +238,9 @@ const ScheduleItemComponent: React.FC<{
         colors[index % colors.length]
       }`}
     >
-      <h2 className="text-3xl font-bold text-center text-shadow">{session.event}</h2>
+      <h2 className="text-3xl font-bold text-center text-shadow">
+        {session.event}
+      </h2>
       <p className="text-xl text-center">{session.time}</p>
       <div className="flex">
         {/* {session.speakers.map((speaker, speakerIndex) => (
