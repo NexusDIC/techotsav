@@ -140,6 +140,20 @@ export default function Speakers() {
       Company: "HCL",
       linkedin: "https://www.linkedin.com/in/roshan-chauhan-a8639020b/",
     },
+    {
+      name: "Ajay Chaudhary",
+      image: "/imgs/Ajay.jpg",
+      post: "Associate Vice President",
+      Company: "GlobalLogic",
+      linkedin: "https://www.linkedin.com/in/ajay-chaudhary-in/?originalSubdomain=in",
+    },
+    {
+      name: "Rahul Bajait",
+      image: "/imgs/Rahul_B.jpg",
+      post: "Co-Founder",
+      Company: "Pragmatyc",
+      linkedin: "https://www.linkedin.com/in/rahul-bajait/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+    }
   ];
 
   return (

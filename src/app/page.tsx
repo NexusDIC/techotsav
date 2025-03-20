@@ -11,6 +11,7 @@ import Navbar from "../Components/Navbar";
 import { SparklesCore } from "@/Components/ui/sparkles";
 import Footer from "@/Components/Footer";
 import Sponsors from "@/Components/Sponsors";
+// import Team from "@/Components/Team";
 
 export default function Home() {
   const techData = [
@@ -119,6 +120,10 @@ export default function Home() {
           <br />
           <hr />
           <br />
+          {/* <Team />
+          <br />
+          <hr />
+          <br /> */}
           <Faq qna={techData} />
           <br />
           <hr />
