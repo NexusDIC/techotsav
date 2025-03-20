@@ -42,7 +42,7 @@ const schedule: ScheduleData = {
     },
     {
       time: "10:15 a.m. – 10:45 a.m",
-      event: "Accelerators in Product Development: Ideation  to Delivery",
+      event: "Key Digital Tenets in Product Development",
       speakers: [
         {
           name: "Speaker 3",
