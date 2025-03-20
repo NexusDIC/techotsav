@@ -41,8 +41,8 @@ const schedule: ScheduleData = {
       ],
     },
     {
-      time: "10:15 a.m. – 11:00 a.m",
-      event: "How to Protect Yourself in the maze of Cyber World?",
+      time: "10:15 a.m. – 10:45 a.m",
+      event: "Accelerators in Product Development: Ideation  to Delivery",
       speakers: [
         {
           name: "Speaker 3",
@@ -51,8 +51,8 @@ const schedule: ScheduleData = {
       ],
     },
     {
-      time: "11:00 a.m. – 11:45 a.m",
-      event: "Role of AI-driven products to transform business processes",
+      time: "10:45 a.m. – 11:15 a.m",
+      event: "Pragmatism of Digital Products in Real-World",
       speakers: [
         {
           name: "Speaker 4",
@@ -61,8 +61,18 @@ const schedule: ScheduleData = {
       ],
     },
     {
+      time: "11:15 a.m. – 11:45 p.m",
+      event: "Role of AI-driven products to transform business processes",
+      speakers: [
+        {
+          name: "Speaker 5",
+          pic: "/imgs/logo.png",
+        },
+      ],
+    },
+    {
       time: "11:45 a.m. – 12:30 p.m",
-      event: "Cyber War-Fare: The Next Global Threat?",
+      event: "Panel Discussion on Cyber War-Fare: The Next Global Threat?",
       speakers: [
         {
           name: "Speaker 5",
@@ -185,7 +195,7 @@ const schedule: ScheduleData = {
     },
     {
       time: "03:30 p.m. – 04:15 p.m",
-      event: "Memory Trainer Session",
+      event: "Enabling Business Transformation: Data, Security & IT Strategy in Action",
       speakers: [
         {
           name: "Speaker 17",
